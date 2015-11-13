@@ -7,6 +7,7 @@
  * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  * 3. Style
  */
+@import "vendors/imageflow.css";
 html {
   /* 1 */
   font: normal 14px / 20px "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7349,6 +7350,36 @@ a.uk-thumbnail:focus {
   color: rgba(255, 255, 255, 0.9);
 }
 /* ========================================================================
+   Component: Sticky
+ ========================================================================== */
+/*
+ * 1. More robust if padding and border are used
+ */
+[data-uk-sticky].uk-active {
+  z-index: 980;
+  /* 1 */
+  box-sizing: border-box;
+}
+/*
+ * 1. Resolve frame-rate issues on devices with lower frame-rates. Forces hardware acceleration
+ */
+.uk-sticky-placeholder > * {
+  /* 1 */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/*
+ * Faster animations
+ */
+[data-uk-sticky][class*='uk-animation-'] {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+[data-uk-sticky].uk-animation-reverse {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+}
+/* ========================================================================
    Component: Dropdown
  ========================================================================== */
 /*
@@ -9038,6 +9069,9 @@ a.uk-thumbnail:focus {
 .lk-nav .uk-navbar-toggle {
   color: #fff;
 }
+.lk-nav .uk-search:before {
+  top: 2px;
+}
 .uk-offcanvas-bar {
   width: 240px;
 }
@@ -9056,4 +9090,61 @@ a.uk-thumbnail:focus {
 .contant hr {
   margin: 12px 0;
   border-top: 2px solid #ddd;
+}
+.contant a {
+  text-decoration: none;
+  color: #000;
+}
+.contant .uk-slidenav-position .uk-slidenav-previous {
+  left: 50px;
+}
+.lk-advantage .lk-adv-img a {
+  width: 180px;
+  height: 110px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding-top: 90px;
+  color: #fff;
+  font-size: 18px;
+}
+.lk-advantage #lk-adv-img-1 {
+  background: url("../images/adv-img-1.png") no-repeat;
+}
+.lk-advantage #lk-adv-img-2 {
+  background: url("../images/adv-img-2.png") no-repeat;
+}
+.lk-advantage #lk-adv-img-3 {
+  background: url("../images/adv-img-3.png") no-repeat;
+}
+.lk-advantage #lk-adv-img-4 {
+  background: url("../images/adv-img-4.png") no-repeat;
+}
+.lk-advantage #lk-adv-text li {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.teacher img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.teacher .uk-panel {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+.teacher .uk-slidenav-position .uk-slidenav-previous {
+  left: 20px;
+}
+.teacher .uk-slidenav-position .uk-slidenav {
+  margin-top: -90px;
+}
+.news .title-id {
+  border-right: 3px solid #ddd;
+}
+.news .title-id span {
+  font-size: 40px;
+  line-height: 105px;
 }

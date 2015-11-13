@@ -36,10 +36,10 @@
 		</div>
 
 		<!-- 导航条 -->
-		<nav class="uk-navbar lk-nav">
+		<nav class="uk-navbar lk-nav"  data-uk-sticky>
 			<div class="uk-container uk-container-center">
 				<ul class="uk-navbar-nav uk-hidden-small">
-					<li><a href="">首页</a></li>
+					<li class="uk-active"><a href="">首页</a></li>
 					<li><a href="">新闻中心</a></li>
 					<li><a href="">名师库</a></li>
 					<li><a href="">作品库</a></li>
@@ -75,63 +75,249 @@
 		</div>
 	</header>
 
-	<!-- 幻灯片 -->
-	<div class="uk-grid uk-hidden-small">
-		<div class="uk-slidenav-position"  style="width: 100%; height:100%;" data-uk-slideshow="{autoplay:true}">
-			<ul class="uk-slideshow">
-				<li><img src="images/1.jpg" alt="" /></li>
-				<li><img src="images/2.jpg" alt="" /></li>
-				<li><img src="images/3.jpg" alt="" /></li>
-			</ul>
-
-			<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
-			<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-			<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom">
-				<li data-uk-slideshow-item="0"><a href=""></a></li>
-				<li data-uk-slideshow-item="1"><a href=""></a></li>
-				<li data-uk-slideshow-item="2"><a href=""></a></li>
-			</ul>
-		</div>
-	</div>
-	
+	<!-- 内容 -->
 	<div class="contant">
+		<!-- 幻灯片 -->
+<!-- 		<div class="lk-slideshow uk-width-1-1" style="background: rgb(42, 2, 39)">
+			<div class="uk-container uk-container-center"> -->
+				<div class="uk-grid uk-hidden-small">
+					<div class="uk-slidenav-position uk-width-1-1" data-uk-slideshow="{autoplay:true}">
+						<ul class="uk-slideshow">
+							<li><img src="images/slideshow-1.jpg" alt="" /></li>
+							<li><img src="images/slideshow-2.jpg" alt="" /></li>
+							<li><img src="images/slideshow-3.jpg" alt="" /></li>
+						</ul>
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom">
+							<li data-uk-slideshow-item="0"><a href=""></a></li>
+							<li data-uk-slideshow-item="1"><a href=""></a></li>
+							<li data-uk-slideshow-item="2"><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+<!-- 			</div>
+		</div> -->
+
+
+		<!-- 优势 -->
 		<div class="lk-advantage">
-			<div class="uk-container uk-container-center uk-margin-top">
+			<div class="uk-container uk-container-center uk-margin-large-top">
 				<div class="uk-grid">
 					<div class="uk-width-1-1">
-						<h3><span class="lk-title">我们的优势</span>/ADVANTAGE</h3>
+						<h3><span class="lk-title">我们的优势 / </span>ADVANTAGE</h3>
 					</div>
 				</div>
 			</div>
 			<hr/>
-			<div class="uk-container uk-container-center uk-margin-top">
+			<div class="uk-container uk-container-center uk-margin-large-top">
+				<ul class="uk-grid lk-adv-img" data-uk-switcher="{connect:'#lk-adv-text', animation:'uk-animation-slide-left', active: 0}">
+					<li class="uk-width-large-1-4 uk-width-medium-1-2 uk-hidden-small"><a id="lk-adv-img-1" href="javascript:void(0);" >名师教学</a></li>
+					<li class="uk-width-large-1-4 uk-width-medium-1-2 uk-hidden-small"><a id="lk-adv-img-2" href="javascript:void(0);" >作品点评</a></li>
+					
+					<li class="uk-width-large-1-4 uk-width-medium-1-2 uk-hidden-small"><a id="lk-adv-img-3" href="javascript:void(0);" >作品下载</a></li>
+					
+					<li class="uk-width-large-1-4 uk-width-medium-1-2 uk-hidden-small"><a id="lk-adv-img-4" href="javascript:void(0);" >O2O约课</a></li>
+					<div class="uk-panel uk-panel-box uk-width-1-1 uk-visible-small">
+						<p>11111111通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</div>
+					<div class="uk-panel uk-panel-box uk-width-1-1 uk-visible-small">
+						<p>2222222222通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</div>
+					<div class="uk-panel uk-panel-box uk-width-1-1 uk-visible-small">
+						<p>3333333333通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</div>
+					<div class="uk-panel uk-panel-box uk-width-1-1 uk-visible-small">
+						<p>4444444444通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</div>
+				</ul>
+				<ul id="lk-adv-text" class="uk-grid uk-flex-center uk-switcher uk-hidden-small">
+					<li class="uk-panel uk-panel-box uk-width-medium-4-5 lk-adv-text-toggle uk-active">
+						<p>11111111通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</li>
+					<li class="uk-panel uk-panel-box uk-width-medium-4-5 lk-adv-text-toggle">
+						<p>222222222222通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</li>
+					<li class="uk-panel uk-panel-box uk-width-medium-4-5 lk-adv-text-toggle">
+						<p>3333333333通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</li>
+					<li class="uk-panel uk-panel-box uk-width-medium-4-5 lk-adv-text-toggle">
+						<p>4444444444通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 老师 -->
+		<div class="teacher">
+			<div class="uk-container uk-container-center uk-margin-large-top">
 				<div class="uk-grid">
-					<div class="uk-width-large-1-4">1</div>
-					<div class="uk-width-large-1-4">2</div>
-					<div class="uk-width-large-1-4">3</div>
-					<div class="uk-width-large-1-4">4</div>
+					<div class="uk-width-4-5">
+						<h3><span class="lk-title">热门名师 / </span>TEACHER</h3>
+					</div>
+					<div class="uk-width-1-5">
+						<h3 class="uk-float-right"><a>MORE</a></h3>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	
-	
-
-	<!-- 底部 -->
-	<footer>
-		<div class="lk-footer uk-grid">
-			<div class="uk-container uk-container-center uk-text-center">
-				<div class="uk-panel">
-					<p>版权所有：广州凌扣网络科技有限公司</p>
-					<p>地址：广州市天河区华夏路49号津滨腾越大厦南塔2710室</p>
+			<hr/>
+			<div class="uk-container uk-container-center uk-margin-large-top">
+				<div class="uk-margin" data-uk-slideset="{small: 1, medium: 2, large: 4}">
+					<div class="uk-slidenav-position uk-margin">
+						<ul class="uk-slideset uk-grid uk-flex-center">
+							<li><img src="images/home-teacher-1.jpg" height="1352" width="1352">
+								<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-2.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-3.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-4.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-4.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-3.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-2.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+								<li><img src="images/home-teacher-1.jpg" height="1352" width="1352"><div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
+									<h3><strong>徐海波</strong><small class="uk-float-right">钢琴</small></h3>
+									<p>国家一级演员<span class="uk-float-right">13年 教龄</span></p>
+								</div></li>
+							</ul>
+							<a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+							<a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+						</div>
+						<ul class="uk-slideset-nav uk-dotnav uk-flex-center"></ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+					<!-- <div class="uk-slidenav-position uk-width-8-10"  data-uk-slideshow="{autoplay:true, kenburns:'5s'}">
+						<ul class="uk-slideshow uk-overlay-active">
+							<li><img src="images/teacher-1.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-overlay-slide-bottom">通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</div></li>
+							<li><img src="images/teacher-2.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-top uk-overlay-slide-top">通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</div></li>
+							<li><img src="images/teacher-3.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-left uk-overlay-slide-left"><p>通过严格筛选和验证，提供优质的师资力量，</p><p>通过严格筛选和验证，提供优质的师资力量，</p><p>通过严格筛选和验证，提供优质的师资力量，</p></div></li>
+							<li><img src="images/teacher-2.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-right uk-overlay-slide-right"><p>通过严格筛选和验证，提供优质的师资力量，</p><p>通过严格筛选和验证，提供优质的师资力量，</p><p>通过严格筛选和验证，提供优质的师资力量，</p></div></li>
+						</ul>
 
-	<script type="text/javascript" src="js/vendors/jquery.min.js"></script>
-	<script type="text/javascript" src="js/vendors/uikit/uikit.min.js"></script>
-	<script type="text/javascript" src="js/vendors/uikit/components/search.min.js"></script>
-	<script type="text/javascript" src="js/vendors/uikit/components/slideshow.min.js"></script>
-</body>
-</html>
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+					</div> -->
+				<!-- 	<div class="uk-slidenav-position uk-width-large-1-2 uk-visible-large"  data-uk-slideshow="{autoplay:true}">
+						<ul class="uk-slideshow uk-overlay-active">
+							<li><img src="images/home-teacher-3.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</div></li>
+							<li><img src="images/home-teacher-4.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-top">通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</div></li>
+							<li><img src="images/home-teacher-5.jpg" alt="" /><div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">通过严格筛选和验证，提供优质的师资力量，包括了国家二级演员或院校副教授级以上的老师，提供了更多可以由这些老师指导和授课的机会。</div></li>
+						</ul>
+
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+					</div> -->
+<!-- 				<div id="starsIF" class="imageflow uk-witdh-1-1">
+					<img src="images/home-teacher-1.jpg" height="1352" width="1352">
+					<img src="images/home-teacher-2.jpg" height="1024" width="1024">
+					<img src="images/home-teacher-3.jpg" height="1024" width="1024">
+					<img src="images/home-teacher-4.jpg" height="1370" width="1370">
+					<img src="images/home-teacher-5.jpg" height="1024" width="1024">
+				</div> -->
+
+
+				<!-- 新闻 -->
+				<div class="news">
+					<div class="uk-container uk-container-center uk-margin-large-top">
+						<div class="uk-grid">
+							<div class="uk-width-4-5">
+								<h3><span class="lk-title">新闻中心 / </span>NEWS</h3>
+							</div>
+							<div class="uk-width-1-5">
+								<h3 class="uk-float-right"><a>MORE</a></h3>
+							</div>
+						</div>
+					</div>
+					<hr/>
+					<div class="uk-container uk-container-center uk-margin-large-top">
+						<div class="uk-grid">
+							<div class="uk-width-large-2-5 uk-visible-large">
+								<ul class="uk-thumbnav uk-width-1-1">
+									<li><a href=""><img src="images/index-img.jpg" width="430"></a></li>
+								</ul>
+								<div class="uk-panel uk-panel-box">
+									<div class="uk-width-1-1">
+										<p>常州吾悦广场店：以爱为名，小星星师生音乐会<span class="uk-float-right">[2015-11-11]</span></p>
+									</div>
+									<div class="uk-width-1-1">
+										<p>随着教学课程的推进，小朋友们的钢琴技艺都有很大的提高。星空琴行随着教学课程的推进，......</p>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-large-3-5">
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-1-6 title-id uk-hidden-small">
+										<span>01</span>
+									</div>
+									<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
+										<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
+										<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
+									</div>
+								</div>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-1-6 title-id uk-hidden-small">
+										<span>02</span>
+									</div>
+									<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
+										<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
+										<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
+									</div>
+								</div>
+								<div class="uk-grid" data-uk-grid-match>
+									<div class="uk-width-1-6 title-id uk-hidden-small">
+										<span>03</span>
+									</div>
+									<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
+										<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
+										<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- 底部 -->
+			<footer>
+				<div class="lk-footer uk-grid uk-margin-large-top">
+					<div class="uk-container uk-container-center uk-text-center">
+						<div class="uk-panel">
+							<p>版权所有：广州凌扣网络科技有限公司</p>
+							<p><small>地址：广州市天河区华夏路49号津滨腾越大厦南塔2710室</small></p>
+							<p>备案/许可证编号：粤ICP备15101032号</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<script type="text/javascript" src="js/vendors/jquery.min.js"></script>
+			<script type="text/javascript" src="js/vendors/uikit/uikit.min.js"></script>
+			<script type="text/javascript" src="js/vendors/uikit/components/search.min.js"></script>
+			<script type="text/javascript" src="js/vendors/uikit/components/slideshow.min.js"></script>
+			<script type="text/javascript" src="js/vendors/uikit/components/sticky.min.js"></script>
+			<script type="text/javascript" src="js/vendors/uikit/components/slideset.js"></script>
+		</body>
+		</html>
