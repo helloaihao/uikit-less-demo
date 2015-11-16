@@ -9065,12 +9065,12 @@ a.uk-thumbnail:focus {
   background-color: #fff;
   border-radius: 20px;
 }
+.lk-nav .lk-search .uk-search:before {
+  top: 2px;
+}
 .lk-nav .uk-navbar-brand,
 .lk-nav .uk-navbar-toggle {
   color: #fff;
-}
-.lk-nav .uk-search:before {
-  top: 2px;
 }
 .uk-offcanvas-bar {
   width: 240px;
