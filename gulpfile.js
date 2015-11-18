@@ -11,6 +11,7 @@ var $           = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 
+//路径
 var globs = {
 	js: 'app/js/**/*.js',
 	css: 'app/css/**/*.css',
@@ -22,14 +23,16 @@ var globs = {
 	]
 }
 
+//压缩CSS
 gulp.task('css', function() {
 	gulp.src(globs.css)
 	.pipe($.minifyCss())
 	.pipe($.rename(function(path) {
 		path.basename = path.basename.replace(path.basename, path.basename + '.min');
 	}))
-	.pipe(gulp.dest(''));
+	.pipe(gulp.dest('app/css/'));
 });
+
 
 gulp.task('js', function() {
 	gulp.src(globs.js)
@@ -40,6 +43,7 @@ gulp.task('js', function() {
 	.pipe(gulp.dest(''));
 });
 
+//编译less
 gulp.task('less', function() {
 	gulp.src('app/less/main.less')
 	.pipe($.less())

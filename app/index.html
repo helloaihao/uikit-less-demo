@@ -31,20 +31,14 @@
 						<ul class="uk-slideshow" data-bind="foreach:{data: CarouselCount}">
 							<li data-bind="style:{backgroundColor:BgColor}">
 								<div class="uk-container uk-container-center">
-									<img data-bind="attr:{src:common.getPhotoUrl2(PicPath), alt: BgColor}" />
+									<a data-bind="attr:{href:Url}"><img data-bind="attr:{src:common.getPhotoUrl2(PicPath)}" /></a>
 								</div>
 							</li>
 						</ul>
 						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
 						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom">
-							<li data-uk-slideshow-item="0">
-								<a href=""></a>
-							</li>
-							<li data-uk-slideshow-item="1">
-								<a href=""></a>
-							</li>
-							<li data-uk-slideshow-item="2">
+						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom" data-bind="foreach:{data: slideshowItem}">
+							<li data-bind="attr:{'data-uk-slideshow-item': $data}">
 								<a href=""></a>
 							</li>
 						</ul>
@@ -152,12 +146,8 @@
 				<div class="uk-container uk-container-center uk-margin-large-top">
 					<div class="uk-grid">
 						<div class="uk-width-large-2-5 uk-visible-large">
-							<ul class="uk-thumbnav uk-width-1-1">
-								<li>
-									<a href=""><img src="images/index-img.jpg" width="430"></a>
-								</li>
-							</ul>
-							<div class="uk-panel uk-panel-box">
+							<a class="uk-thumbnail" href=""><img src="images/index-img.jpg" width="430"></a>
+							<div class="uk-panel uk-panel-box uk-margin-small-top">
 								<div class="uk-width-1-1">
 									<p>常州吾悦广场店：以爱为名，小星星师生音乐会<span class="uk-float-right">[2015-11-11]</span></p>
 								</div>
