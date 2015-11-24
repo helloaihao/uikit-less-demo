@@ -9,7 +9,7 @@ var headerInfo = heredoc(function(){/*
             <div class="uk-container uk-container-center">
                 <div class="uk-grid">
                     <div class="uk-width-medium-1-2 uk-width-small-1-1">
-                        <a href="#"><img src="images/logo.png" height="88" width="259"></a>
+                        <a id="lk-logo" href="#"></a>
                     </div>
                     <div class="uk-width-medium-1-2 uk-hidden-small uk-margin-top">
                         <div class="uk-grid">
@@ -19,7 +19,7 @@ var headerInfo = heredoc(function(){/*
                             </div>
                             <div class="uk-width-1-1 uk-margin-top uk-clearfix">
                                 <div class="lk-tel web-tel">
-                                    <i class="uk-icon-phone"></i><img src="images/tel.png" height="24" width="137">
+                                    <i class="uk-icon-phone"></i><span></span>
                                 </div>
                             </div>
                         </div>

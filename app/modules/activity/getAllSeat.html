@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>古筝艺术节——所有座位</title>
+		<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
+		<link href="../../fonts/iconfont.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+	</head>
+
+	<body style="margin: 8px;">
+		<div class="uk-panel uk-form uk-form-horizontal" data-bind="foreach: {data: userSeats}">
+			<div class="uk-form-row uk-grid uk-grid-small">
+				场次：<span data-bind="text: ShowTitle"></span><br />
+				时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)"></span><br />
+				地点：<span data-bind="text: PlaceName"></span><br />
+				座位：<span data-bind="text: SeatName"></span>
+			</div>
+		</div>
+
+		<script src="../../script/vendors/jquery.min.js"></script>
+		<script src="../../script/vendors/uikit/uikit.js"></script>
+		<script src="../../script/vendors/uikit/components/notify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../script/common/common.js"></script>
+		<script src="../../script/vendors/knockout/knockout-3.3.0.js"></script>
+		<script src="../../script/activity/getAllSeat.js"></script>
+	</body>
+
+</html>

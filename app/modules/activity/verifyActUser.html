@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>古筝艺术节——用户验证</title>
+		<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css"/>
+		<link href="../../fonts/iconfont.css" rel="stylesheet" />
+		<link href="../../css/main.css" rel="stylesheet" />
+	</head>
+
+	<body style="margin: 8px;">
+		<div class="uk-panel uk-form uk-form-horizontal">
+				<div class="uk-form-row uk-grid uk-grid-small">
+					<label class="uk-form-label uk-width-1-3" for="form-h-it">姓名</label>
+					<div class="uk-form-controls uk-width-1-2">
+						<input id="form-h-it" placeholder="请输入姓名" type="text" data-bind="value: DisplayName">
+					</div>
+				</div>
+				<div class="uk-form-row uk-grid uk-grid-small">
+					<label class="uk-form-label uk-width-1-3" for="form-h-ip">电话号码</label>
+					<div class="uk-form-controls uk-width-1-2">
+						<input id="form-h-ip" placeholder="请输入电话号码" onfocus="this.type='number'" onblur="this.type='text'" data-bind="value: UserName" type="text">
+					</div>
+				</div>
+				
+				<div class="uk-form-row">
+					<a class="uk-button uk-width-2-3 uk-align-center uk-button-primary" data-bind="click: checkUser, enable: canVerify">验  证</a>
+				</div>
+		</div>
+
+		<script src="../../script/vendors/jquery.min.js"></script>
+		<script src="../../script/vendors/uikit/uikit.js"></script>
+		<script src="../../script/vendors/uikit/components/notify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../script/common/common.js"></script>
+		<script src="../../script/vendors/knockout/knockout-3.3.0.js"></script>
+		<script src="../../script/activity/verifyActUser.js"></script>
+	</body>
+
+</html>

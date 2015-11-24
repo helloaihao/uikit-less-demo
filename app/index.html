@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -6,11 +6,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>纽带教育在线</title>
-		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<!-- build:css css/main.css -->
 		<link rel="stylesheet" href="css/main.css" />
+		<!-- endbuild -->
 		<link rel="stylesheet" href="fonts/iconfont.css" />
 		<!--header$footer-->
-		<script type="text/javascript" src="script/common/header-footer.js"></script>
+		<script type="text/javascript" src="script/header-footer.js"></script>
 	</head>
 
 	<body>
@@ -28,7 +30,7 @@
 
 				<div class="uk-grid">
 					<div id="lk-slideshow" class="uk-slidenav-position uk-width-1-1">
-						<ul class="uk-slideshow" data-bind="foreach:{data: CarouselCount}">
+						<ul class="uk-slideshow" data-bind="foreach:{data: carouselCount}">
 							<li data-bind="style:{backgroundColor:BgColor}">
 								<div class="uk-container uk-container-center">
 									<a data-bind="attr:{href:Url}"><img data-bind="attr:{src:common.getPhotoUrl2(PicPath)}" /></a>
@@ -195,19 +197,20 @@
 		<script type="text/javascript">
 			footerInit();
 		</script>
-		<!-- jq -->
+		<!-- build:js script/main.js -->
 		<script type="text/javascript" src="script/vendors/jquery.min.js"></script>
-		<!-- uikit -->
 		<script type="text/javascript" src="script/vendors/uikit/uikit.min.js"></script>
+		<script type="text/javascript" src="script/vendors/knockout/knockout-3.3.0.min.js"></script>
+		<script type="text/javascript" src="script/common/common.js"></script>
+		<!-- endbuild -->
+		
+		<!-- build:js script/index.js -->
 		<script type="text/javascript" src="script/vendors/uikit/components/search.min.js"></script>
 		<script type="text/javascript" src="script/vendors/uikit/components/slideshow.min.js"></script>
 		<script type="text/javascript" src="script/vendors/uikit/components/sticky.min.js"></script>
-		<script type="text/javascript" src="script/vendors/uikit/components/slideset.js"></script>
-		<!-- knockout -->
-		<script type="text/javascript" src="script/vendors/knockout/knockout-3.3.0.min.js"></script>
-		<!-- linkeol -->
-		<script type="text/javascript" src="script/common/common.js"></script>
+		<script type="text/javascript" src="script/vendors/uikit/components/slideset.min.js"></script>
 		<script type="text/javascript" src="script/index.js"></script>
+		<!-- endbuild -->
 	</body>
 
 </html>
