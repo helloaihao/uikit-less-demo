@@ -9,7 +9,7 @@ var headerInfo = heredoc(function(){/*
             <div class="uk-container uk-container-center">
                 <div class="uk-grid">
                     <div class="uk-width-medium-1-2 uk-width-small-1-1">
-                        <a id="lk-logo" href="#"></a>
+                        <a id="lk-logo" href="/index.html"></a>
                     </div>
                     <div class="uk-width-medium-1-2 uk-hidden-small uk-margin-top">
                         <div class="uk-grid">
@@ -31,13 +31,13 @@ var headerInfo = heredoc(function(){/*
         <!-- 导航条 -->
         <nav class="uk-navbar lk-nav" data-uk-sticky>
             <div class="uk-container uk-container-center">
-                <ul class="uk-navbar-nav uk-hidden-small">
-                    <li class="uk-active"><a href="">首页</a></li>
-                    <li><a href="">新闻中心</a></li>
-                    <li><a href="">名师库</a></li>
-                    <li><a href="">作品库</a></li>
-                    <li><a href="">我的空间</a></li>
-                    <li><a href="">关于我们</a></li>
+                <ul id="lk-nav-large" class="uk-navbar-nav uk-hidden-small">
+                    <li><a href="/index.html">首页</a></li>
+                    <li><a href="/modules/news/newsList.html">新闻中心</a></li>
+                    <li><a href="/modules/teacher/teacherList.html">名师库</a></li>
+                    <li><a href="/modules/works/workList.html">作品库</a></li>
+                    
+                    <li><a href="/modules/home/aboutUs.html">关于我们</a></li>
                 </ul>
                 <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
                 <div class="uk-navbar-brand uk-navbar-center uk-visible-small">纽带教育</div>
@@ -54,12 +54,11 @@ var headerInfo = heredoc(function(){/*
         <!-- 侧边栏 -->
         <div id="offcanvas" class="uk-offcanvas">
             <div class="uk-offcanvas-bar">
-                <ul class="uk-nav uk-nav-offcanvas">
-                    <li class="uk-active"><a href="#">首页</a></li>
+                <ul id="lk-nav-small" class="uk-nav uk-nav-offcanvas">
+                    <li><a href="#">首页</a></li>
                     <li><a href="#">新闻中心</a> </li>
                     <li><a href="#">名师库</a></li>
                     <li><a href="#">作品库</a></li>
-                    <li><a href="#">我的空间</a></li>
                     <li><a href="#">关于我们</a></li>
                     <li><a href="#">登录</a></li>
                     <li><a href="#">注册</a></li>
@@ -80,9 +79,13 @@ var headerInfo = heredoc(function(){/*
     </div>
  */});
 
-var headerInit = function() {
+var headerInit = function(num) {
 	var headerobj = document.getElementsByTagName('header');
 	headerobj[0].innerHTML = headerInfo;
+	var navLarge = document.getElementById('lk-nav-large').getElementsByTagName('li');
+	var navSmall = document.getElementById('lk-nav-small').getElementsByTagName('li');
+	navLarge[num].className = 'uk-active';
+	navSmall[num].className = 'uk-active';
 }
 
 var footerInit = function() {

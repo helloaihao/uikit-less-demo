@@ -9,15 +9,154 @@
 		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
 		<link href="../../fonts/iconfont.css" rel="stylesheet" />
 		<link href="../../css/main.css" rel="stylesheet" />
+		<style>
+			html,
+			body {
+				background: #0f70b9;
+			}
+			
+			.seat-title {
+				color: #fff;
+				height: 30px;
+				width: 100%;
+				padding: 15px 0px 5px 15px;
+				box-sizing: border-box;
+				font-size: 16px;
+			}
+			
+			.seat-search {
+				border-left: 1px solid #e2e1e1;
+				border-right: 1px solid #e2e1e1;
+				border-bottom: 1px solid #e2e1e1;
+				height: 0px;
+				width: 88%;
+				padding: 2px 0px 5px 15px;
+				box-sizing: border-box;
+				margin: 36px auto 0;
+				position: relative;
+			}
+
+			.seat-search i {
+				color: #e2e1e1;
+				position: absolute;
+				left: 5px;
+				top: -20px;
+				font-size: 16px;
+			}
+			
+			.seat-search input {
+				color: #fff;
+				font-size: 14px;
+				position: absolute;
+				left: 30px;
+				top: -20px;
+				font-family: "微软雅黑";
+				background: none;
+				border: none;
+			}
+			
+			.seat-search-button {
+				padding: 4px 16px;
+				position: absolute;
+				right: 10px;
+				top: -22px;
+				background: #fff;
+				border-radius: 3px;
+				letter-spacing: 1px;
+				border: none;
+				font-family: "微软雅黑";
+			}
+			
+			.seat-con-card {
+				background: #fff;
+				border-radius: 16px;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 7px 15.68px 0.32px rgba(0, 90, 157, 0.224);
+				width: 90%;
+				height: auto;
+				margin: 26px auto 0;
+				padding: 15px 10px 12px 10px;
+				box-sizing: border-box;
+			}
+			
+			.seat-con-card p {
+				color: #333;
+				font-size: 14px;
+			}
+			
+			table {
+				border-left: 1px solid #ccc;
+				border-top: 1px solid #ccc;
+			}
+			
+			.seat-table td {
+				border-right: 1px solid #ccc;
+				border-bottom: 1px solid #ccc;
+				box-sizing: border-box;
+				text-align: center;
+				font-size: 12px;
+				padding: 4px 0;
+			}
+			
+			.seat-search-button{
+				padding: 0px 16px;
+				position: absolute;
+				right: 10px;
+				top: -28px;
+				background: #fff;
+				border-radius: 3px;
+				letter-spacing: 1px;
+				border: none;
+				font-family: "微软雅黑";
+			}
+		</style>
 	</head>
 
-	<body style="margin: 8px;">
-		<div class="uk-panel uk-form uk-form-horizontal" data-bind="foreach: {data: userSeats}">
-			<div class="uk-form-row uk-grid uk-grid-small">
-				场次：<span data-bind="text: ShowTitle"></span><br />
-				时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)"></span><br />
-				地点：<span data-bind="text: PlaceName"></span><br />
-				座位：<span data-bind="text: SeatIsFinal && SeatName != '' ? SeatName : '未分配'"></span>
+	<body>
+		<div id="main" style="display: none;">
+			<div class="getSeat-title" data-bind="visible: actRoleType() == 1 || actRoleType() == 2">
+				<h3 data-bind="visible: actRoleType() == 1 || actRoleType() == 2">尊敬的来宾：</h3>
+				<p data-bind="visible: actRoleType() == 2">您好！您的座位信息如下。</p>
+				<p data-bind="visible: actRoleType() == 1">很抱歉，暂无您的座位安排信息。</p>
+			</div>
+			<div data-bind="visible: actRoleType() == 3">
+				<div class="seat-title">座位分配信息</div>
+				<div class="seat-search">
+					<i class="uk-icon-search"></i>
+					<input type="text" placeholder="输入关键字" data-bind="value: searchText" />
+					<button class="uk-button seat-search-button" data-bind="click: search">搜索</button>
+				</div>
+			</div>
+			
+			<div class="getSeat-con-bg" data-bind="foreach: {data: allShows, as: 'show'}, visible: actRoleType() == 2">
+				<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
+				<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
+				<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
+				<p class="seat">座位号：<span data-bind="text: SeatIsFinal && SeatName != '' ? SeatName : '未分配'">一楼5排16号</span></p>
+			</div>
+			
+			<div class="seat-con-card" data-bind="foreach: {data: allShows, as: 'show'}, actRoleType() == 3">
+				<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
+				<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
+				<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
+
+				<hr />
+				<table class="seat-table" cellspacing="0" cellpadding="0" border="0" height="100%" width="100%" data-bind="visible: show.SeatIsFinal == true">
+					<tr>
+						<td>姓名</td>
+						<td>电话号码</td>
+						<td>座位号</td>
+					</tr>
+					<!--ko foreach: {data: seats, as: 'seat'}-->
+					<tr>
+						<td data-bind="text: seat.DisplayName, visible: show.ID == seat.ShowID"></td>
+						<td data-bind="text: seat.UserName, visible: show.ID == seat.ShowID"></td>
+						<td data-bind="text: seat.SeatName, visible: show.ID == seat.ShowID"></td>
+					</tr>
+					<!--/ko-->
+				</table>
+				
+				<div data-bind="visible: show.SeatIsFinal == false">尚未安排座位</div>
 			</div>
 		</div>
 

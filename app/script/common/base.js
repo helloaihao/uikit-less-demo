@@ -112,7 +112,7 @@ var handleResult = function(result) {
         //扩展增强处理  
         var _opt = $.extend(opt, {
             beforeSend: function (req) {
-                req.setRequestHeader('Authorization', base.getAuth());
+                req.setRequestHeader('Authorization', self.getAuth());
             },
             error: function (xmlhttprequest, textstatus, errorthrown) {
                 switch (xmlhttprequest.status) {

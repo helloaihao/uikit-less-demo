@@ -5,12 +5,12 @@
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>纽带教育在线</title>
-		<link rel="shortcut icon" href="favicon.ico" />
+		<title>乐评+</title>
+		<link rel="shortcut icon" href="../../images/favicon.ico" />
 		<!-- build:css({.tmp,src}) /css/main.css -->
-		<link rel="stylesheet" href="../../css/main.css"/>
+		<link rel="stylesheet" href="../../css/main.css" />
 		<!-- endbuild -->
-		<link rel="stylesheet" href="../../fonts/iconfont.css"/>
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
 		<!--header$footer-->
 		<script type="text/javascript" src="../../script/header-footer.js"></script>
 	</head>
@@ -19,19 +19,19 @@
 		<!-- 头部 -->
 		<header></header>
 		<script type="text/javascript">
-			headerInit();
+			headerInit(3);
 		</script>
-		
+
 		<div class="teacherList-bg">
 			<div class="uk-container uk-container-center">
 				<div class="uk-grid">
 					<div class="uk-width-1-2 uk-margin-large-top">
-						<h2 id="teacherList-h2">作品库  / <span>WORK OF THE LIBRARY</span></h2>
+						<h3 id="teacherList-h3">作品库  / <span>WORK OF THE LIBRARY</span></h3>
 					</div>
 					<!--<div class="uk-width-1-2 uk-margin-large-top">
 						选择
 						</div>	
-					-->	
+					-->
 					<div class="uk-width-1-1 uk-margin-large-top">
 						<div class="uk-grid">
 							<div class="uk-width-1-10 teacherList-con">
@@ -42,366 +42,64 @@
 								<i class="i-small-last"></i>
 							</div>
 							<div class="uk-width-9-10">
-								<div class="uk-grid">
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
+								<div class="uk-grid" data-bind="foreach:{data: works}">
+									<div class="uk-width-1-3 uk-margin-large-bottom">
+										<a data-bind="attr: {href: 'workInfo.html?id=' + ID}"><img  data-bind="attr:{src: common.getPhotoUrl(VideoThumbnail)}" onerror="this.src='../../images/teacherList-photo.png';" /></a>
 										<div class="teacherList-con-border">
 											<div class="uk-grid">
-												<div class="uk-width-3-4">
+												<div class="uk-width-3-4" data-bind="text: Title">
 													【刘洋】"未来之星"钢琴比赛
 												</div>
-												<div class="uk-width-1-4 workList-subject">
+												<div class="uk-width-1-4 workList-subject" data-bind="text: SubjectName">
 													钢琴
 												</div>
-												<div class="uk-width-1-1 workList-p">
+												<div class="uk-width-1-1 workList-p" data-bind="text: ContentText">
 													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
 												</div>
 												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
 													初级钢琴
 												</div>
 												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
+													<span data-bind="text: ReadCount">1356</span>次
 												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
+												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul" data-bind="text: AddTime.substring(0, 10)">
 													2015-11-12
 												</div>
-											</div>		
-										</div>										
+											</div>
+										</div>
 									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
+
 								</div>
-								
-								<div class="uk-grid">
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-								</div>
-								
-								
-								<div class="uk-grid">
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-								</div>
-								
-								
-								<div class="uk-grid">
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-									<div class="uk-width-1-3">
-										<img src="../../images/teacherList-photo.png" />
-										<div class="teacherList-con-border">
-											<div class="uk-grid">
-												<div class="uk-width-3-4">
-													【刘洋】"未来之星"钢琴比赛
-												</div>
-												<div class="uk-width-1-4 workList-subject">
-													钢琴
-												</div>
-												<div class="uk-width-1-1 workList-p">
-													<p>因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下因才施教与丰富教学内容双管齐下……</p>
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													初级钢琴
-												</div>
-												<div class="uk-width-3-10 uk-margin-small-top workList-last-ul">
-													1356次
-												</div>
-												<div class="uk-width-4-10 uk-margin-small-top workList-last-ul">
-													2015-11-12
-												</div>
-											</div>		
-										</div>										
-									</div>
-								</div>
-								
-								
-								
-								
-								
-								
 							</div>
 						</div>
-						
-						
+
 					</div>
 				</div>
-				
-			
-			<div class="uk-grid">
-				<div class="uk-width-1-1">
-					<ul class="uk-pagination uk-pagination-right">
-				    <li><a href="">首页</a></li>
-				    <li class="uk-active"><span>1</span></li>
-				    <li class="uk-disabled"><span>2</span></li>
-				    <li class="uk-active"><span>3</span></li>
-				    <li class="uk-disabled"><span>4</span></li>
-				    <li class="uk-active"><span>5</span></li>
-				    <li class="uk-disabled"><span>6</span></li>
-				    <li><span>尾页</span></li>
-				</ul>
+
+				<div class="uk-grid uk-margin-remove">
+					<div class="uk-width-1-1">
+						<ul class="uk-pagination uk-pagination-right">
+							<li>
+								<a href=""></a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			</div>				
-		</div>	
+		</div>
 		<footer></footer>
 		<script type="text/javascript">
 			footerInit();
 		</script>
-			<!-- jq -->
+		<!-- jq -->
 		<script type="text/javascript" src="../../script/vendors/jquery.min.js"></script>
 		<!-- uikit -->
 		<script type="text/javascript" src="../../script/vendors/uikit/uikit.min.js"></script>
 		<script type="text/javascript" src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
+		<script src="../../script/vendors/uikit/components/pagination.min.js" type="text/javascript" charset="utf-8"></script>
 		<!-- linkeol -->
+		<script src="../../script/common/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../script/work/workList.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

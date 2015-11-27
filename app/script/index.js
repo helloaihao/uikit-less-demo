@@ -11,7 +11,7 @@
                 var arr = JSON.parse(data);
                 self.list(arr);
                 var lkSlideset = document.getElementById('lk-slideset');
-                var slideset = UIkit.slideset(lkSlideset, { small: 1, medium: 2, large: 4 });
+                var slideset = UIkit.slideset(lkSlideset, { small: 1, medium: 2, large: 4, animation: 'none'});
             }
         });
     }();
@@ -37,15 +37,5 @@
         });
     }();
     
-//  var newsurl = "./news.html";
-//  self.getNews = function() {
-//  	$.ajax({
-//  		url: newsurl,
-//  		type: "get",
-//  		success: function(data) {
-//  			$('#news').html(data);
-//  		}
-//  	});
-//  }();
 }
 ko.applyBindings(TeacherList);

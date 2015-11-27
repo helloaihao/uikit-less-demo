@@ -207,7 +207,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 15px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #444;
   text-transform: none;
@@ -7379,6 +7379,99 @@ a.uk-thumbnail:focus {
   animation-duration: 0.2s;
 }
 /* ========================================================================
+   Component: Progress
+ ========================================================================== */
+/*
+ * 1. Clearing
+ * 2. Vertical alignment if text is used
+ */
+.uk-progress {
+  box-sizing: border-box;
+  height: 20px;
+  margin-bottom: 15px;
+  background: #eee;
+  /* 1 */
+  overflow: hidden;
+  /* 2 */
+  line-height: 20px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .uk-progress {
+  margin-top: 15px;
+}
+/* Sub-object: `uk-progress-bar`
+ ========================================================================== */
+/*
+ * 1. Transition
+ * 2. Needed for text
+ */
+.uk-progress-bar {
+  width: 0;
+  height: 100%;
+  background: #00a8e6;
+  float: left;
+  /* 1 */
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+  /* 2 */
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+/* Size modifiers
+ ========================================================================== */
+/* Mini */
+.uk-progress-mini {
+  height: 6px;
+}
+/* Small */
+.uk-progress-small {
+  height: 12px;
+}
+/* Color modifiers
+ ========================================================================== */
+.uk-progress-success .uk-progress-bar {
+  background-color: #8cc14c;
+}
+.uk-progress-warning .uk-progress-bar {
+  background-color: #faa732;
+}
+.uk-progress-danger .uk-progress-bar {
+  background-color: #da314b;
+}
+/* Modifier: `uk-progress-striped`
+ ========================================================================== */
+.uk-progress-striped .uk-progress-bar {
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 30px 30px;
+}
+/*
+ * Animation
+ */
+.uk-progress-striped.uk-active .uk-progress-bar {
+  -webkit-animation: uk-progress-bar-stripes 2s linear infinite;
+  animation: uk-progress-bar-stripes 2s linear infinite;
+}
+@-webkit-keyframes uk-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+@keyframes uk-progress-bar-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+/* ========================================================================
    Component: Dropdown
  ========================================================================== */
 /*
@@ -9023,7 +9116,7 @@ a.uk-thumbnail:focus {
   display: block;
 }
 .lk-logobar {
-  background: #0ad3b1;
+  background: #007dd1;
   padding: 20px 0;
 }
 .lk-logobar .lk-btn-login,
@@ -9058,7 +9151,7 @@ a.uk-thumbnail:focus {
 }
 .lk-nav {
   height: 46px;
-  background: #01be9e;
+  background: #0172be;
 }
 .lk-nav li a {
   width: 110px;
@@ -9087,16 +9180,18 @@ a.uk-thumbnail:focus {
   width: 240px;
 }
 .lk-footer {
-  background: #0ad3b1;
+  background: #007dd1;
   padding: 20px 0;
   color: #fff;
-}
-.contant h3 {
-  font-family: "微软雅黑";
 }
 .contant h3 span {
   padding: 10px 10px;
   border-bottom: 3px solid #777;
+}
+.contant h3 em {
+  font-style: normal;
+  font-size: 14px;
+  color: #333;
 }
 .contant hr {
   margin: 12px 0;
@@ -9118,6 +9213,12 @@ a.uk-thumbnail:focus {
   padding-top: 90px;
   color: #fff;
   font-size: 18px;
+}
+.lk-advantage .lk-adv-img h2 {
+  text-align: center;
+}
+.lk-advantage .lk-adv-img p {
+  font-size: 16px;
 }
 .lk-advantage #lk-adv-img-1 {
   background: url("../images/adv-img-1.png") no-repeat;
@@ -9306,7 +9407,7 @@ a.uk-thumbnail:focus {
   line-height: 24px;
 }
 .aboutUs-h2 {
-  color: #0ad3b1;
+  color: #007dd1;
   font-size: 24px;
   font-weight: 600;
 }
@@ -9322,8 +9423,11 @@ a.uk-thumbnail:focus {
 .newsList-bg {
   background: #f1f1f1;
 }
+.newsList-bg h3 {
+  font-family: "微软雅黑";
+}
 .newsList-title-Engshile {
-  font-size: 18px;
+  font-size: 14px;
 }
 .newsList-con-border {
   border-right: 1px solid #036EB8;
@@ -9428,12 +9532,11 @@ a.uk-thumbnail:focus {
   box-sizing: border-box;
   padding: 0 10px;
 }
-#teacherList-h2 {
+#teacherList-h3 {
   color: #333;
-  font-size: 24px;
-  font-weight: 600;
+  font-family: "微软雅黑";
 }
-#teacherList-h2 span {
+#teacherList-h3 span {
   font-size: 14px;
   font-weight: normal;
 }
@@ -9533,6 +9636,14 @@ a.uk-thumbnail:focus {
   content: "\e603\e603\e603\e603\e603";
   font-family: "iconfont";
 }
+.lk-introduce {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.lk-teachers img {
+  border: 1px solid #bfbfbf;
+}
 .workList-p {
   text-indent: 2em;
   margin-bottom: 8px;
@@ -9607,14 +9718,14 @@ a.uk-thumbnail:focus {
   margin-top: 40px;
 }
 .teacherInfo-teacher-left {
-  padding: 20px 0;
+  padding-top: 20px;
   border-right: 1px dashed #666;
 }
 .teacherInfo-btn-ul li {
   list-style: none;
   padding: 10px 0;
   margin: 4px 0;
-  background: #0ad3b1;
+  background: #007dd1;
   width: 60%;
   color: #fff;
   text-align: center;
@@ -9706,7 +9817,7 @@ a.uk-thumbnail:focus {
 }
 .workInfo-border em {
   font-style: normal;
-  background: #0ad3b1;
+  background: #007dd1;
   height: 24px;
   width: auto;
   padding: 4px 12px;
@@ -9788,4 +9899,125 @@ a.uk-thumbnail:focus {
   margin: 6px 0;
   line-height: 30px;
   font-size: 16px;
+}
+.error-div {
+  width: 100%;
+  padding-top: 50%;
+  text-align: center;
+}
+.error-div i {
+  font-size: 90px;
+  color: #b1b1b1;
+}
+.error-div h4 {
+  font-family: "微软雅黑";
+  font-size: 18px;
+  color: #b1b1b1;
+}
+.verifyActUser-bg {
+  height: 100%;
+  width: 100%;
+  background: url(../images/Zheng-bg.png) no-repeat;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+}
+.verifyActUser-school-logo {
+  background: url(../images/zheng-Logo.png) no-repeat;
+  margin: 10% auto 6%;
+  height: 111px;
+  width: 90px;
+}
+.verifyActUser-title {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 22px;
+}
+.verifyActUser-input {
+  margin: 20px auto 5px;
+  height: auto;
+  width: 76%;
+  overflow: hidden;
+}
+.verifyActUser-input input {
+  width: 100%;
+  height: 44px;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  color: #333;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  text-align: center;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+.verifyActUser-button {
+  width: 36%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+.verifyActUser-button button {
+  height: 44px;
+  width: 100%;
+  background: #ceae00;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+.verifyActUser-footer-logo {
+  height: 50px;
+  width: 181px;
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  margin-left: -90px;
+}
+.getSeat-title {
+  height: auto;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+.getSeat-title h3 {
+  color: #fff;
+  font-size: 18px;
+  font-family: "微软雅黑";
+}
+.getSeat-title p {
+  font-size: 16px;
+  text-indent: 2em;
+  color: #fff;
+}
+.getSeat-con-bg {
+  border-radius: 16px;
+  background-image: url(../images/getSeat-zheng.png);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  box-shadow: 0px 7px 15.68px 0.32px rgba(0, 90, 157, 0.224);
+  width: 90%;
+  height: auto;
+  background-size: contain;
+  background-position: right top;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 20px 6px 20px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.getSeat-con-bg p {
+  color: #333;
+  font-size: 14px;
+}
+.getSeat-con-bg .seat {
+  color: #cf0000;
+  font-weight: 600;
+  margin-top: 30px;
 }

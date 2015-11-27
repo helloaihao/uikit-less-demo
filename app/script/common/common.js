@@ -193,14 +193,16 @@
 		 * @param {String} photo 图片名
 		 */
 		getPhotoUrl: function(photo) {
-			return common.gServerUrl + 'Common/GetImage?url=' + photo;
+			return common.gServerUrl + 'Images/' + photo;
 		},
 		getPhotoUrl2: function(photo) {
-			return common.gServerUrl + 'Common/GetImage2?url=' + photo;
+			return common.gWebsiteUrl + 'Pics/' + photo;
 		},
 
 		//Web API地址
-		gServerUrl: "http://192.168.1.101:8090/", //"http://localhost:53651/"	//"http://192.168.1.99:8090/"
+		gServerUrl: "http://cloud.linkeol.com/", //"http://localhost:53651/"	//"http://192.168.1.99:8090/" http://192.168.1.66:8090/ "http://cloud.linkeol.com/"
+
+		gWebsiteUrl: "http://www.linkeol.com/",  //http://192.168.1.66:8090/
 		//用户类型枚举
 		gDictUserType: {
 			teacher: 32,
