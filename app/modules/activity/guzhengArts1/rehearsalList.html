@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>乐评家</title>
+		<link rel="shortcut icon" href="../../../images/favicon.ico" />
+		<link rel="stylesheet" href="../../../css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/vendors/uikit/components/notify.css" />
+	</head>
+
+	<body>
+		<div id="main" style="display: none;">
+			<div class="uk-container uk-container-center" data-bind="visible: actRoleType() == 1 || actRoleType() == 3">
+				<div class="uk-width-1-1 reh-con">
+					<div class="reh-title">
+						<h2>【彩排流程】首届岭南古筝艺术节 彩排流程一览</h2>
+					</div>
+					<p>
+						<img src="../../../images/640.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/641.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/643.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/644.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/646.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/647.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/648.jpg" />
+					</p>
+					<p>
+						<img src="../../../images/649.jpg" />
+					</p>
+					<p style="font-weight: bold; font-size: 18px; text-align: center;">
+						长按二维码，关注乐评家，使音乐学习更出色！
+					</p>
+					<br />
+					<br />
+				</div>
+			</div>
+			<div class="uk-container uk-container-center" data-bind="visible: actRoleType() != 1 && actRoleType() != 3">
+				<div class="uk-width-1-1 reh-con">
+					<div class="reh-title">
+						<h3>您似乎不需要了解这些信息吧:-)</h3>
+					</div>
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+
+		<script src="../../../script/vendors/jquery.min.js"></script>
+		<script src="../../../script/vendors/uikit/uikit.min.js"></script>
+		<script src="../../../script/vendors/uikit/components/notify.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../script/common/common.js"></script>
+		<script src="../../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
+		<script src="../../../script/activity/guzhengArts1/rehearsalList.js"></script>
+	</body>
+
+</html>

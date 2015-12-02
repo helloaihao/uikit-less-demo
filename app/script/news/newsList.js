@@ -20,6 +20,7 @@
 					var pagedom = $('.uk-pagination');
 					UIkit.pagination(pagedom, {items: self.news()[0].TotalCount, itemsOnPage: pageSize, displayedPages: 3, edges: 1});
 					pageflag = true;
+					$('#news-defult').css({'display': 'none'});
 				}
 			}
 		});

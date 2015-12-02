@@ -3,15 +3,8 @@ function heredoc(exedoc) {
 	var result = src.substring(src.indexOf("/*")+3, src.lastIndexOf("*/"));
 	return result;
 }
-
-var headerInfo = heredoc(function(){/*
-	<div class="lk-logobar">
-            <div class="uk-container uk-container-center">
-                <div class="uk-grid">
-                    <div class="uk-width-medium-1-2 uk-width-small-1-1">
-                        <a id="lk-logo" href="/index.html"></a>
-                    </div>
-                    <div class="uk-width-medium-1-2 uk-hidden-small uk-margin-top">
+/*
+ * <div class="uk-width-medium-1-2 uk-hidden-small uk-margin-top">
                         <div class="uk-grid">
                             <div class="uk-width-1-1">
                                 <button class="uk-button lk-btn-reg">注册</button>
@@ -24,6 +17,15 @@ var headerInfo = heredoc(function(){/*
                             </div>
                         </div>
                     </div>
+ */
+var headerInfo = heredoc(function(){/*
+	<div class="lk-logobar uk-hidden-small">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+                    <div class="uk-width-1-1">
+                        <a id="lk-logo" href="/index.html"></a>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -33,14 +35,14 @@ var headerInfo = heredoc(function(){/*
             <div class="uk-container uk-container-center">
                 <ul id="lk-nav-large" class="uk-navbar-nav uk-hidden-small">
                     <li><a href="/index.html">首页</a></li>
-                    <li><a href="/modules/news/newsList.html">新闻中心</a></li>
+                    <li><a href="/modules/news/newsList.html">乐评资讯</a></li>
                     <li><a href="/modules/teacher/teacherList.html">名师库</a></li>
                     <li><a href="/modules/works/workList.html">作品库</a></li>
                     
                     <li><a href="/modules/home/aboutUs.html">关于我们</a></li>
                 </ul>
                 <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-                <div class="uk-navbar-brand uk-navbar-center uk-visible-small">纽带教育</div>
+                <div class="uk-navbar-brand uk-navbar-center uk-visible-small">乐评家</div>
                 <div class="uk-navbar-flip lk-search uk-visible-large">
                     <div class="uk-navbar-content">
                         <form class="uk-search" data-uk-search>
@@ -55,13 +57,12 @@ var headerInfo = heredoc(function(){/*
         <div id="offcanvas" class="uk-offcanvas">
             <div class="uk-offcanvas-bar">
                 <ul id="lk-nav-small" class="uk-nav uk-nav-offcanvas">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">新闻中心</a> </li>
-                    <li><a href="#">名师库</a></li>
-                    <li><a href="#">作品库</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">登录</a></li>
-                    <li><a href="#">注册</a></li>
+                    <li><a href="/index.html">首页</a></li>
+                    <li><a href="/modules/news/newsList.html">乐评资讯</a> </li>
+                    <li><a href="/modules/teacher/teacherList.html">名师库</a></li>
+                    <li><a href="/modules/works/workList.html">作品库</a></li>
+                    <li><a href="/modules/home/aboutUs.html">关于我们</a></li>
+                   
                 </ul>
             </div>
         </div>
@@ -70,10 +71,10 @@ var headerInfo = heredoc(function(){/*
  var footerInfo = heredoc(function(){/*
  	<div class="lk-footer uk-grid uk-margin-large-top">
         <div class="uk-container uk-container-center uk-text-center">
-            <div class="uk-panel">
-                <p>版权所有：广州凌扣网络科技有限公司</p>
-                <p><small>地址：广州市天河区华夏路49号津滨腾越大厦南塔2710室</small></p>
-                <p>备案/许可证编号：粤ICP备15101032号</p>
+            <div class="uk-panel uk-hidden-small">
+                <p>©2015 广州凌扣网络科技有限公司</p>
+                <p>广州市天河区华夏路49号津滨腾越大厦南塔2710室</p>
+                <p>粤ICP备15101032号</p>
             </div>
         </div>
     </div>

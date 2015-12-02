@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>乐评+</title>
+		<title>乐评家</title>
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<!-- build:css css/main.css -->
 		<link rel="stylesheet" href="css/main.css" />
@@ -27,23 +26,22 @@
 		<div class="contant">
 			<!-- 幻灯片 -->
 			<div class="lk-slideshow uk-width-1-1">
-
-				<div class="uk-grid">
-					<div id="lk-slideshow" class="uk-slidenav-position uk-width-1-1">
-						<ul class="uk-slideshow" data-bind="foreach:{data: carouselCount}">
-							<li data-bind="style:{backgroundColor:BgColor}">
-								<div class="uk-container uk-container-center">
+				<div class="uk-container uk-container-center">
+					<div class="uk-grid">
+						<div id="lk-slideshow" class="uk-slidenav-position uk-width-1-1">
+							<ul class="uk-slideshow" data-bind="foreach:{data: carouselCount}">
+								<li data-bind="style:{backgroundColor:BgColor}">
 									<a data-bind="attr:{href:Url}"><img data-bind="attr:{src:common.getPhotoUrl2(PicPath)}" /></a>
-								</div>
-							</li>
-						</ul>
-						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
-						<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
-						<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom" data-bind="foreach:{data: slideshowItem}">
-							<li data-bind="attr:{'data-uk-slideshow-item': $data}">
-								<a href=""></a>
-							</li>
-						</ul>
+								</li>
+							</ul>
+							<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+							<a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+							<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-margin-bottom uk-hidden-small" data-bind="foreach:{data: slideshowItem}">
+								<li data-bind="attr:{'data-uk-slideshow-item': $data}">
+									<a href=""></a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -51,34 +49,41 @@
 			<!-- 优势 -->
 			<div class="lk-advantage">
 				<div class="uk-container uk-container-center uk-margin-large-top">
-					<div class="uk-grid">
-						<div class="uk-width-1-1">
-							<h3><span class="lk-title">我们的优势 / </span>
-								<em>ADVANTAGE</em></h3>
-						</div>
-					</div>
-				</div>
-				<hr />
-				<div class="uk-container uk-container-center uk-margin-large-top">
 					<ul class="uk-grid lk-adv-img" data-uk-switcher="{connect:'#lk-adv-text', animation:'uk-animation-slide-left', active: 0}">
-						<li class="uk-width-large-1-4 uk-width-medium-1-2"><a id="lk-adv-img-1" href="javascript:void(0);">名师教学</a><div class="uk-panel uk-width-1-1">
-							<h2>名师在线辅导</h2>
-							<p>国家二级以上演奏家、全首席专业师资</p>
-						</div></li>
-						<li class="uk-width-large-1-4 uk-width-medium-1-2"><a id="lk-adv-img-2" href="javascript:void(0);">作品点评</a><div class="uk-panel uk-width-1-1">
-							<h2>作业直通管理</h2>
-							<p>优化作业管理，学生教师零距离互动，随时提交作业，随时获得指导</p>
-						</div></li>
+						<li class="uk-width-large-1-4 uk-width-1-4">
+							<!--<a id="lk-adv-img-1" href="javascript:void(0);">名师教学</a>-->
+							<div class="uk-panel uk-width-1-1">
+								<img src="images/ico-4.jpg" alt="" />
+								<!--<h2>名师在线辅导</h2>
+								<p>汇聚国家二级以上演奏家、全首席音乐专业师资和教育专家力量 </p>-->
+							</div>
+						</li>
+						<li class="uk-width-large-1-4 uk-width-1-4">
+							<!--<a id="lk-adv-img-2" href="javascript:void(0);">作品点评</a>-->
+							<div class="uk-panel uk-width-1-1">
+								<img src="images/ico-3.jpg" alt="" />
+								<!--<h2>作业直通管理</h2>
+								<p>优化作业管理，学生教师零距离互动，随时提交作业，随时获得指导</p>-->
+							</div>
+						</li>
 
-						<li class="uk-width-large-1-4 uk-width-medium-1-2"><a id="lk-adv-img-3" href="javascript:void(0);">作品下载</a><div class="uk-panel uk-width-1-1">
-							<h2>学生登台演出</h2>
-							<p>提供每一种器乐学生登台演出机会</p>
-						</div></li>
+						<li class="uk-width-large-1-4 uk-width-1-4">
+							<!--<a id="lk-adv-img-3" href="javascript:void(0);">作品下载</a>-->
+							<div class="uk-panel uk-width-1-1">
+								<img src="images/ico-2.jpg" alt="" />
+								<!--<h2>学生登台演出</h2>
+								<p>提供全面持续的交流演出形态，让每一种器乐学生登台演出</p>-->
+							</div>
+						</li>
 
-						<li class="uk-width-large-1-4 uk-width-medium-1-2"><a id="lk-adv-img-4" href="javascript:void(0);">O2O约课</a><div class="uk-panel uk-width-1-1">
-							<h2>快速获得加分</h2>
-							<p>教育部《艺术加分政策》全面实施，平台引导快速提高演奏水平获得加分</p>
-						</div></li>
+						<li class="uk-width-large-1-4 uk-width-1-4">
+							<img src="images/ico-1.jpg" alt="" />
+							<!--<a id="lk-adv-img-4" href="javascript:void(0);">O2O约课</a>-->
+							<div class="uk-panel uk-width-1-1">
+								<!--<h2>快速获得加分</h2>
+								<p>教育部《艺术加分政策》全面实施，平台引导快速提高演奏水平获得加分</p>-->
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -92,7 +97,7 @@
 								<em>TEACHER</em></h3>
 						</div>
 						<div class="uk-width-1-5">
-							<h3 class="uk-float-right"><a>MORE</a></h3>
+							<h5 class="uk-float-right"><a href="/modules/teacher/teacherList.html">MORE</a></h5>
 						</div>
 					</div>
 				</div>
@@ -103,104 +108,119 @@
 							<ul data-bind="foreach:{data: list}" class="uk-slideset uk-grid uk-flex-center">
 
 								<li>
-									<img data-bind="attr:{src:common.getPhotoUrl(Photo)}" height="1352" width="1352">
+									<a data-bind="attr:{href: '/modules/teacher/teacherInfo.html?id=' + UserID}"><img data-bind="attr:{src:common.getPhotoUrl(Photo)}" height="1352" width="1352"></a>
 									<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-top">
 										<h3><strong data-bind="text:DisplayName"></strong><small class="uk-float-right" data-bind="text:SubjectName">钢琴</small></h3>
-										<p>
-											<!--ko text:'国家一级演员'-->
-											<!--/ko--><span class="uk-float-right" data-bind="text:TeachAge+'年 教龄'"></span></p>
+										<div class="uk-grid">
+											<div class="uk-width-medium-1-2"><span data-bind="text: '国家一级演员'"></span></div>
+											<!--<div class="uk-width-1-2 uk-hidden-small"><span class="uk-float-right" data-bind="text:TeachAge+'年 教龄'"></span></div>
+											<div class="uk-width-1-1 uk-visible-small"><span data-bind="text:TeachAge+'年 教龄'"></span></div>-->
+										</div>
+
 									</div>
 								</li>
 							</ul>
 							<a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
 							<a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
 						</div>
-						<ul class="uk-slideset-nav uk-dotnav uk-flex-center"></ul>
+						<ul class="uk-slideset-nav uk-dotnav uk-flex-center uk-hidden-small"></ul>
 					</div>
 				</div>
 			</div>
 
 			<!-- 新闻 -->
 			<div class="news">
-				<div class="uk-container uk-container-center uk-margin-large-top">
+				<!--<p></p>-->
+				<div class="uk-container uk-container-center">
 					<div class="uk-grid">
-						<div class="uk-width-4-5">
-							<h3><span class="lk-title">新闻中心 / </span>
-								<em>NEWS</em></h3>
+						<div class="uk-width-large-2-3 uk-margin-large-top">
+							<div class="uk-grid">
+								<div class="uk-width-5-6">
+									<h3><span class="lk-title">演奏会专区 / </span>
+								<em>ARTS</em></h3>
+								</div>
+								<div class="uk-width-1-6">
+									<h5 class="uk-float-right"><a href="/modules/activity/guzhengArts1/index.html">MORE</a></h5>
+								</div>
+								<div id="myFocus" class=" uk-margin-large-top">
+									<!--焦点图盒子-->
+									<div class="loading"></div>
+									<!--载入画面(可删除)-->
+									<div class="pic">
+										<!--图片列表-->
+										<ul>
+											<li>
+												<a href="http://mp.weixin.qq.com/s?__biz=MzIwOTA4MDMzOA==&mid=402038844&idx=2&sn=4dca70c3f8fa918defae63d992813d5f&scene=18#rd">
+													<img src="images/GZlarge1.jpg" thumb="" alt="金声玉振·南筝馥郁   岭南音乐专场暨开幕式 ">
+												</a>
+											</li>
+											<li>
+												<a href="http://mp.weixin.qq.com/s?__biz=MzIwOTA4MDMzOA==&mid=402038844&idx=3&sn=f0a083e413b7d3bdd7dd645ced80e67c&scene=18#rd"><img src="images/GZlarge2.jpg" thumb="" alt="金声玉振·古韵凝香  名家系列音乐会之一" /></a>
+											</li>
+											<li>
+												<a href="http://mp.weixin.qq.com/s?__biz=MzIwOTA4MDMzOA==&mid=402038844&idx=4&sn=d75b4a3ed09be950fa064cca7bbdabc1&scene=18#rd"><img src="images/GZlarge3.jpg" thumb="" alt="弘扬名族音乐·弦柱新声 名家系列音乐会之二" /></a>
+											</li>
+											<li>
+												<a href="http://mp.weixin.qq.com/s?__biz=MzIwOTA4MDMzOA==&mid=402038844&idx=5&sn=83573754b3de6238acfc87d771cd674a&scene=18#rd"><img src="images/GZlarge4.jpg" thumb="" alt="今声玉振·团花簇锦    院校优秀筝团展演" /></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="uk-width-1-5">
-							<h3 class="uk-float-right"><a>MORE</a></h3>
-						</div>
-					</div>
-				</div>
-				<hr />
-				<div class="uk-container uk-container-center uk-margin-large-top">
-					<div class="uk-grid">
-						<div class="uk-width-large-2-5 uk-visible-large">
-							<a class="uk-thumbnail" href=""><img src="images/index-img.jpg" width="430"></a>
-							<div class="uk-panel uk-panel-box uk-margin-small-top">
+						<div id="lk-news" class="uk-width-large-1-3 uk-width-small-1-1 uk-margin-large-top">
+							<div class="uk-grid">
+								<div class="uk-width-5-6">
+									<h3><span class="lk-title">乐评资讯 / </span>
+										<em>NEWS</em>
+										</h3>
+								</div>
+								<div class="uk-width-1-6">
+									<h5 class="uk-float-right"><a href="/modules/news/newsList.html">MORE</a></h5>
+								</div>
 								<div class="uk-width-1-1">
-									<p>常州吾悦广场店：以爱为名，小星星师生音乐会<span class="uk-float-right">[2015-11-11]</span></p>
+									<figure class="uk-overlay uk-margin-large-top">
+										<a class="uk-container-center" href="/modules/news/newsInfo.html?id=14"><img src="images/home-news.jpg" alt=""></a>
+										<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom">教育部印发《中小学生艺术素质测评办法》</figcaption>
+									</figure>
 								</div>
 								<div class="uk-width-1-1">
-									<p>随着教学课程的推进，小朋友们的钢琴技艺都有很大的提高。星空琴行随着教学课程的推进，......</p>
-								</div>
-							</div>
-						</div>
-						<div class="uk-width-large-3-5">
-							<div class="uk-grid" data-uk-grid-match>
-								<div class="uk-width-1-6 title-id uk-hidden-small">
-									<span>01</span>
-								</div>
-								<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
-									<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
-									<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
-								</div>
-							</div>
-							<div class="uk-grid" data-uk-grid-match>
-								<div class="uk-width-1-6 title-id uk-hidden-small">
-									<span>02</span>
-								</div>
-								<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
-									<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
-									<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
-								</div>
-							</div>
-							<div class="uk-grid" data-uk-grid-match>
-								<div class="uk-width-1-6 title-id uk-hidden-small">
-									<span>03</span>
-								</div>
-								<div class="uk-width-medium-5-6 uk-small-width-1-1 uk-panel uk-panel-box">
-									<p>踩着板凳的小小钢琴家<span class="uk-float-right">[2015-11-11]</span></p>
-									<p>7月10日，随着最后一个音符的落下，星空杯12城市复赛全部结束！6天复赛时光很短，短到临上场前的紧张犹在心里盘旋，下一秒演奏结束......</p>
+									<ul class="uk-list uk-list-space uk-margin-top">
+										<!--<li><a href="http://mp.weixin.qq.com/s?__biz=MzIwOTA4MDMzOA==&mid=401640831&idx=1&sn=76c43b8a5d8832a295146e2c37602f95#rd">[资讯]教育部印发《中小学生艺术素质测评办法》</a></li>-->
+										<li><a href="/modules/news/newsInfo.html?id=2">「乐」| 中小学生艺术素质测评指标体系（试行）</a></li>
+										<li><a href="/modules/news/newsInfo.html?id=3">「乐」| 传闻2016年广东音乐高考要改革？</a></li>
+										<li><a href="/modules/news/newsInfo.html?id=6">「乐」| 为啥！？练琴练到吐血还是不见效果  
+</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- 底部 -->
-		<footer></footer>
-		<script type="text/javascript">
-			footerInit();
-		</script>
-		<!-- build:js script/main.js -->
-		<script type="text/javascript" src="script/vendors/jquery.min.js"></script>
-		<script type="text/javascript" src="script/vendors/uikit/uikit.min.js"></script>
-		<script type="text/javascript" src="script/vendors/knockout/knockout-3.3.0.min.js"></script>
-		<script type="text/javascript" src="script/vendors/uikit/components/search.min.js"></script>
-		<script type="text/javascript" src="script/vendors/uikit/components/sticky.min.js"></script>
-		<script type="text/javascript" src="script/common/common.js"></script>
-		<!-- endbuild -->
-		
-		<!-- build:js script/index.js -->
+			<!-- 底部 -->
+			<footer></footer>
+			<script type="text/javascript">
+				footerInit();
+			</script>
+			<!-- build:js script/main.js -->
+			<script type="text/javascript" src="script/vendors/jquery.min.js"></script>
+			<script type="text/javascript" src="script/vendors/uikit/uikit.min.js"></script>
+			<script type="text/javascript" src="script/vendors/knockout/knockout-3.3.0.min.js"></script>
+			<script type="text/javascript" src="script/vendors/uikit/components/search.min.js"></script>
+			<script type="text/javascript" src="script/vendors/uikit/components/sticky.min.js"></script>
+			<script type="text/javascript" src="script/common/common.js"></script>
+			<!-- endbuild -->
 
-		<script type="text/javascript" src="script/vendors/uikit/components/slideshow.min.js"></script>
-		<script type="text/javascript" src="script/vendors/uikit/components/slideset.min.js"></script>
-		<script type="text/javascript" src="script/index.js"></script>
-		<!-- endbuild -->
+			<!-- build:js script/index.js -->
+
+			<script type="text/javascript" src="script/vendors/uikit/components/slideshow.min.js"></script>
+			<script type="text/javascript" src="script/vendors/uikit/components/slideset.min.js"></script>
+			
+			<script src="script/vendors/myFocus/myfocus-2.0.4.min.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript" src="script/index.js"></script>
+			<!-- endbuild -->
 	</body>
 
 </html>

@@ -5,8 +5,8 @@
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>乐评+</title>
-		<link rel="shortcut icon" href="favicon.ico" />
+		<title>乐评家</title>
+		<link rel="shortcut icon" href="../../images/favicon.ico" />
 		<!-- build:css({.tmp,src}) /css/main.css -->
 		<link rel="stylesheet" href="../../css/main.css" />
 		<!-- endbuild -->
@@ -36,18 +36,21 @@
 			<div class="teacherInfo-teacher uk-margin-top">
 				<div class="uk-container uk-container-center">
 					<div class="uk-grid">
-						<div class="uk-width-2-4 teacherInfo-teacher-dashed teacherInfo-teacher-padding">
+						<div class="uk-width-medium-1-3 teacherInfo-teacher-dashed teacherInfo-teacher-padding">
 							<div class="uk-grid">
-								<div class="uk-width-3-10">
-									<img src="../../images/teacherList-photo.png" />
+								<div class="uk-width-large-4-10 uk-width-medium-1-2">
+									<img data-bind="attr:{src: common.getPhotoUrl(Photo)}" onerror="this.src='../../images/video-big-default.png';" />
 								</div>
-								<div class="uk-width-7-10 teacherInfo-teacher-left">
-									<h3 data-bind="text: DisplayName">赵小亮</h3>
+								<div class="uk-width-large-6-10  uk-width-medium-1-2 teacherInfo-teacher-left">
+									
 									<div class="uk-grid">
-										<div class="uk-width-1-3">
-											教龄：<i data-bind="text: TeachAge">5</i>年
+										<div class="uk-width-medium-1-1 uk-width-1-2">
+											<h3 data-bind="text: DisplayName">赵小亮</h3>
 										</div>
-										<div class="uk-width-2-3">
+										<!--<div class="uk-width-1-3">
+											教龄：<i data-bind="text: TeachAge">5</i>年
+										</div>-->
+										<div class="uk-width-medium-1-1 uk-width-1-2">
 											科目：<i data-bind="text: SubjectName">钢琴</i>
 										</div>
 									</div>
@@ -58,10 +61,10 @@
 							</div>
 
 						</div>
-						<div class="uk-width-1-4 teacherInfo-teacher-dashed teacherInfo-teacher-padding teacherInfo-teacher-line">
+						<div class="uk-width-medium-1-3 teacherInfo-teacher-dashed teacherInfo-teacher-padding teacherInfo-teacher-line uk-hidden-small">
 							星级：<span data-bind="text: Star + '.0'"></span><i class="star4" data-bind="attr: {class: 'star' + Star}"></i>
 						</div>
-						<div class="uk-width-1-4 teacherInfo-teacher-padding">
+						<div class="uk-width-medium-1-3 teacherInfo-teacher-padding uk-hidden-small">
 							<ul class="teacherInfo-btn-ul">
 								<li>相册</li>
 								<li>关注</li>
@@ -74,7 +77,7 @@
 			</div>
 			<div class="uk-container uk-container-center uk-margin-large-top">
 				<div class="uk-grid">
-					<div class="uk-width-1-10 teacherInfo-dir-margin">
+					<div class="uk-width-1-10 teacherInfo-dir-margin uk-hidden-small">
 						<div id="teacher-side-nav">
 							<li class="teacherInfo-dir">
 								<a href="#1"><span>简介</span>
@@ -95,11 +98,11 @@
 								<a href="#4"><span>演出</span>
 								<i>4</i></a>
 							</li>
-							<div class="teacherInfo-dir-dashed"></div>
+							<!--<div class="teacherInfo-dir-dashed"></div>
 							<li class="teacherInfo-dir ">
 								<a href="#5"><span>课程</span>
 								<i>5</i></a>
-							</li>
+							</li>-->
 						</div>
 					</div>
 
@@ -112,26 +115,12 @@
 						</div>
 						<h3 id="2" class="teacherInfo-dir-h3">分解教程</h3>
 						<div class="uk-grid">
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
+							<p>暂无</p>
+							<!--<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
 								<img src="../../images/index-img.jpg" />
 								<h4>梦中的婚礼(一)</h4>
 								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
+							</div>-->
 						</div>
 
 						<div class="uk-width-1-1 teacherInfo-content-margin">
@@ -139,26 +128,7 @@
 						</div>
 						<h3 id="3" class="teacherInfo-dir-h3">完整教程</h3>
 						<div class="uk-grid">
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
+							<p>暂无</p>
 						</div>
 
 						<div class="uk-width-1-1 teacherInfo-content-margin">
@@ -166,58 +136,16 @@
 						</div>
 						<h3 id="4" class="teacherInfo-dir-h3">演出作品</h3>
 						<div class="uk-grid">
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-							</div>
+							<p>暂无</p>
 						</div>
 
 						<div class="uk-width-1-1 teacherInfo-content-margin">
 							<hr />
 						</div>
-						<h3 id="5" class="teacherInfo-dir-h3">课程</h3>
+						<!--<h3 id="5" class="teacherInfo-dir-h3">课程</h3>
 						<div class="uk-grid">
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-								<span>￥130.00</span>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-								<span>￥130.00</span>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-								<span>￥130.00</span>
-							</div>
-							<div class="uk-width-1-2 teacherInfo-masg teacherInfo-content-margin">
-								<img src="../../images/index-img.jpg" />
-								<h4>梦中的婚礼(一)</h4>
-								<p>湖南省歌舞剧院民族乐团，长沙市花鼓剧院担任胡琴演奏员，并随团参加各类大小型音乐会。</p>
-								<span>￥130.00</span>
-							</div>
-						</div>
+							<p>暂无</p>
+						</div>-->
 
 					</div>
 				</div>

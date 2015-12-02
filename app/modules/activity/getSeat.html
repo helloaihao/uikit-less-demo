@@ -5,10 +5,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>古筝艺术节——座位分配</title>
-		<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
+		<!--<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />-->
 		<link href="../../fonts/iconfont.css" rel="stylesheet" />
 		<link href="../../css/main.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
 		<style>
 			html,
 			body {
@@ -35,7 +35,7 @@
 				margin: 36px auto 0;
 				position: relative;
 			}
-
+			
 			.seat-search i {
 				color: #e2e1e1;
 				position: absolute;
@@ -53,18 +53,6 @@
 				font-family: "微软雅黑";
 				background: none;
 				border: none;
-			}
-			
-			.seat-search-button {
-				padding: 4px 16px;
-				position: absolute;
-				right: 10px;
-				top: -22px;
-				background: #fff;
-				border-radius: 3px;
-				letter-spacing: 1px;
-				border: none;
-				font-family: "微软雅黑";
 			}
 			
 			.seat-con-card {
@@ -98,74 +86,104 @@
 				padding: 4px 0;
 			}
 			
-			.seat-search-button{
+			.seat-search-button {
 				padding: 0px 16px;
 				position: absolute;
 				right: 10px;
 				top: -28px;
-				background: #fff;
 				border-radius: 3px;
 				letter-spacing: 1px;
 				border: none;
 				font-family: "微软雅黑";
 			}
+			
+			.address-btn {
+				font-size: 12px;
+				border-radius: 3px;
+			}
+			
+			.vertical-middle {
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
 		</style>
 	</head>
 
 	<body>
+		<div id="waiting" class="uk-progress uk-progress-striped uk-active vertical-middle">
+			<div class="uk-progress-bar" style="width: 100%;"></div>
+		</div>
+
 		<div id="main" style="display: none;">
 			<div class="getSeat-title" data-bind="visible: actRoleType() == 1 || actRoleType() == 2">
-				<h3 data-bind="visible: actRoleType() == 1 || actRoleType() == 2">尊敬的来宾：</h3>
-				<p data-bind="visible: actRoleType() == 2">您好！您的座位信息如下。</p>
-				<p data-bind="visible: actRoleType() == 1">很抱歉，暂无您的座位安排信息。</p>
+				<h3 data-bind="html: '尊敬的<u> ' + displayName() + ' </u>先生/女士：'"></h3>
+				<p data-bind="visible: allShows().length > 0">您好！您的座位信息如下：</p>
+				<p data-bind="visible: allShows().length <= 0">很抱歉，暂无您的座位安排信息。</p>
 			</div>
 			<div data-bind="visible: actRoleType() == 3">
 				<div class="seat-title">座位分配信息</div>
-				<div class="seat-search">
-					<i class="uk-icon-search"></i>
-					<input type="text" placeholder="输入关键字" data-bind="value: searchText" />
-					<button class="uk-button seat-search-button" data-bind="click: search">搜索</button>
+				<form>
+					<div class="seat-search">
+						<i class="uk-icon-search"></i>
+						<input type="text" placeholder="最多显示10条结果" data-bind="value: searchText" />
+						<button class="uk-button seat-search-button" data-bind="click: search" type="submit">搜索</button>
+					</div>
+				</form>
+			</div>
+
+			<div data-bind="foreach: {data: allShows, as: 'show'}, visible: (actRoleType() == 1 || actRoleType() == 2) && allShows().length > 0">
+				<div class="getSeat-con-bg">
+					<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
+					<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
+					<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
+					<!--ko foreach: {data: allShowsPics, as: 'pic'}-->
+					<a class="uk-button uk-button-primary address-btn" data-bind="attr: {'href': pic.path}, text: pic.filename, visible: pic.showid==show.ID"></a>
+					<!--/ko-->
+	
+					<p class="seat">座位号：<span data-bind="text: SeatIsFinal && SeatName != '' ? SeatName : '未分配'">一楼5排16号</span></p>
 				</div>
 			</div>
 			
-			<div class="getSeat-con-bg" data-bind="foreach: {data: allShows, as: 'show'}, visible: actRoleType() == 2">
-				<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
-				<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
-				<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
-				<p class="seat">座位号：<span data-bind="text: SeatIsFinal && SeatName != '' ? SeatName : '未分配'">一楼5排16号</span></p>
-			</div>
-			
-			<div class="seat-con-card" data-bind="foreach: {data: allShows, as: 'show'}, actRoleType() == 3">
-				<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
-				<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
-				<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
-
-				<hr />
-				<table class="seat-table" cellspacing="0" cellpadding="0" border="0" height="100%" width="100%" data-bind="visible: show.SeatIsFinal == true">
-					<tr>
-						<td>姓名</td>
-						<td>电话号码</td>
-						<td>座位号</td>
-					</tr>
-					<!--ko foreach: {data: seats, as: 'seat'}-->
-					<tr>
-						<td data-bind="text: seat.DisplayName, visible: show.ID == seat.ShowID"></td>
-						<td data-bind="text: seat.UserName, visible: show.ID == seat.ShowID"></td>
-						<td data-bind="text: seat.SeatName, visible: show.ID == seat.ShowID"></td>
-					</tr>
+			<div data-bind="foreach: {data: allShows, as: 'show'}, visible: actRoleType() == 3">
+				<div class="seat-con-card">
+					<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
+					<p>时间：<span data-bind="text: common.formatTime(BeginTime, EndTime)">2015年11月28日 20:00</span></p>
+					<p>地点：<span data-bind="text: PlaceName">星海音乐学院音乐厅交响乐厅</span></p>
+					<!--ko foreach: {data: allShowsPics, as: 'pic'}-->
+					<a class="uk-button uk-button-primary address-btn" data-bind="attr: {'href': pic.path}, text: pic.filename, visible: pic.showid==show.ID"></a>
 					<!--/ko-->
-				</table>
-				
-				<div data-bind="visible: show.SeatIsFinal == false">尚未安排座位</div>
+					<hr />
+					<table class="seat-table" cellspacing="0" cellpadding="0" border="0" height="100%" width="100%" data-bind="visible: show.SeatIsFinal == true">
+						<tr>
+							<td>姓名</td>
+							<td>电话号码</td>
+							<td>座位号</td>
+						</tr>
+						<!--ko foreach: {data: seats, as: 'seat'}-->
+						<tr>
+							<td data-bind="text: seat.DisplayName, visible: show.ID == seat.ShowID"></td>
+							<td data-bind="text: seat.UserName, visible: show.ID == seat.ShowID"></td>
+							<td data-bind="text: seat.SeatName, visible: show.ID == seat.ShowID"></td>
+						</tr>
+						<!--/ko-->
+					</table>
+
+					<div data-bind="visible: show.SeatIsFinal == false">尚未安排座位</div>
+				</div>
 			</div>
 		</div>
 
 		<script src="../../script/vendors/jquery.min.js"></script>
-		<script src="../../script/vendors/uikit/uikit.js"></script>
-		<script src="../../script/vendors/uikit/components/notify.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../script/vendors/uikit/uikit.min.js"></script>
+		<script src="../../script/vendors/uikit/components/notify.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../script/common/common.js"></script>
-		<script src="../../script/vendors/knockout/knockout-3.3.0.js"></script>
+		<script src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
 		<script src="../../script/activity/getSeat.js"></script>
+		<script src="../../script/vendors/uikit/components/lightbox.min.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

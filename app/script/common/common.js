@@ -138,21 +138,36 @@
 			if (isNaN(bdate)) { //非日期格式，原文返回
 				return btime;
 			}
+			var edate;
+			if(etime){
+				if (etime instanceof Date)
+					edate = etime;
+				else {
+					edate = new Date(etime.replace(/-/gi, '/'));
+				}
+			}
+			else
+				edate = bdate;
+			
 			var ehour = 0;
 			if (etime) {
-				if (etime instanceof Date)
-					ehour = etime.getHours();
-				else
-					ehour = (new Date(etime.replace(/-/gi, '/'))).getHours();
+				ehour = edate.getHours();
 			} else
 				ehour = bdate.getHours() + 1;
-				
-			var minutes = bdate.getMinutes();
-			if (minutes < 10)
-				minutes = "0" + minutes.toString();
+
+			var bMinutes = bdate.getMinutes();
+			if (bMinutes < 10)
+				bMinutes = "0" + bMinutes.toString();
 			else
-				minutes = minutes.toString();
-			var ret = (bdate.getMonth() + 1) + '月' + bdate.getDate() + '日' + ' ' + bdate.getHours() + ':' + minutes + '~' + ehour + ':' + minutes;
+				bMinutes = bMinutes.toString();
+			
+			var eMinutes = edate.getMinutes();
+			if (eMinutes < 10)
+				eMinutes = "0" + eMinutes.toString();
+			else
+				eMinutes = eMinutes.toString();
+				
+			var ret = (bdate.getMonth() + 1) + '月' + bdate.getDate() + '日' + ' ' + bdate.getHours() + ':' + bMinutes + '~' + ehour + ':' + eMinutes;
 
 			return ret;
 		},
@@ -199,10 +214,21 @@
 			return common.gWebsiteUrl + 'Pics/' + photo;
 		},
 
+		/**
+		 * 获取视频缩略图
+		 * @param {String} photo 图片名
+		 */
+		getThumbnail: function(photo) {
+			return common.gVideoServerUrl + 'Thumbnails/' + photo;
+		},
+
 		//Web API地址
 		gServerUrl: "http://cloud.linkeol.com/", //"http://localhost:53651/"	//"http://192.168.1.99:8090/" http://192.168.1.66:8090/ "http://cloud.linkeol.com/"
 
-		gWebsiteUrl: "http://www.linkeol.com/",  //http://192.168.1.66:8090/
+		gWebsiteUrl: "http://www.linkeol.com/", //http://192.168.1.66:8090/
+
+		gVideoServerUrl: "http://video.linkeol.com/",
+
 		//用户类型枚举
 		gDictUserType: {
 			teacher: 32,

@@ -5,7 +5,7 @@
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>乐评+</title>
+		<title>乐评家</title>
 		<link rel="shortcut icon" href="../../images/favicon.ico" />
 		<!-- build:css({.tmp,src}) /css/main.css -->
 		<link rel="stylesheet" href="../../css/main.css" />
@@ -32,38 +32,44 @@
 				<li class="uk-active"><span>作品详情</span></li>
 			</ul>
 		</div>
-		<div class="uk-container uk-container-center">
-			<div class="uk-grid workInfo-con-padding">
-				<div class="uk-width-1-1 uk-margin-top workInfo-border" data-bind="foreach:{data: works}">
-					<img src="../../images/1_1280x800.jpg" />
-					<span data-bind="text: Title">扬琴弹奏技巧</span>
-					<em data-bind="text: SubjectName">扬琴</em>
-					<div class="uk-grid workInfo-con-dow">
-						<div class="uk-width-1-10">
-							<img src="../../images/workInfo-photo.jpg" />
-						</div>
-						<div class="uk-width-9-10 workInfo-ul-padding">
-							<ul class="workInfo-ul">
-								<li>
-									<span data-bind="text: AuthorName">赵小小</span>
-									<i data-bind="text: AddTime">发布于2015-11-12 12:20:32</i>
-								</li>
-								<li>
-									<button>+关注</button>
-									<i class="iconfont i-font">&#xe60b;</i><i data-bind="text: LikeCount">123</i>
-									<i class="iconfont i-font">&#xe60e;</i><i data-bind="text: ReadCount">2365</i>
-									<i class="iconfont i-font">&#xe607;</i>分享
-									<i class="iconfont i-font">&#xe608;</i>收藏
-									<i class="iconfont i-font">&#xe60a;</i>下载
-									<i class="iconfont i-font">&#xe609;</i>用手机观看
-								</li>
-							</ul>
-							<p data-bind="text: ContentText"> 广东民族乐团青年胡琴演奏家 中胡声部首席 毕业于湖南师范大学音乐学院 师从杨长安教授 在校期间，曾多次荣获湖南省器乐比赛大奖，活跃于湖南省各类音乐会舞台。
-							</p>
-						</div>
+		<div class="uk-container uk-container-center workInfo-con-dow">
+			<div class="workInfo-con-padding uk-margin-top workInfo-border" data-bind="foreach:{data: works}">
+				<div class="uk-grid">
+					<div class="uk-width-1-1">
+						<img src="../../images/1_1280x800.jpg" />
+					</div>
+				</div>
+				<div class="uk-grid">
+					<div class="uk-width-medium-1-1 uk-width-small-1-2">
+						<span data-bind="text: Title">扬琴弹奏技巧</span>
+						<em data-bind="text: SubjectName">扬琴</em>
 					</div>
 
+					<div class="uk-width-medium-1-10 uk-width-small-1-2">
+						<img src="../../images/workInfo-photo.jpg" />
+					</div>
+					<div class="uk-width-medium-9-10 uk-width-small-1-1 workInfo-ul-padding">
+						<ul class="workInfo-ul">
+							<li>
+								<span data-bind="text: AuthorName">赵小小</span>
+								<i data-bind="text: AddTime">发布于2015-11-12 12:20:32</i><i class="iconfont i-font">&#xe60e;</i>
+								<i data-bind="text: ReadCount">2365</i>
+							</li>
+							<li class="lk-workInfo-ico">
+								<button>+关注</button>
+								<a href=""><i class="iconfont i-font">&#xe60b;</i><i data-bind="text: LikeCount">123</i></a>
+
+								<a href=""><i class="iconfont i-font">&#xe607;</i>分享</a>
+								<a href=""><i class="iconfont i-font">&#xe608;</i>收藏</a>
+								<!--<i class="iconfont i-font">&#xe60a;</i>下载-->
+								<!--<i class="iconfont i-font">&#xe609;</i>用手机观看-->
+							</li>
+						</ul>
+						<p data-bind="text: ContentText"> 广东民族乐团青年胡琴演奏家 中胡声部首席 毕业于湖南师范大学音乐学院 师从杨长安教授 在校期间，曾多次荣获湖南省器乐比赛大奖，活跃于湖南省各类音乐会舞台。
+						</p>
+					</div>
 				</div>
+
 				<div class="uk-width-1-1 uk-margin-top">
 					Ta的相关作品
 				</div>

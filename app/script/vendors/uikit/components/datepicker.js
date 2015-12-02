@@ -172,7 +172,7 @@
             // init dropdown
             if (!dropdown) {
 
-                dropdown = UI.$('<div class="uk-dropdown uk-datepicker"></div>');
+                dropdown = UI.$('<div class="uk-dropdown uk-datepicker uk-hidden-small"></div>');
 
                 dropdown.on("click", ".uk-datepicker-next, .uk-datepicker-previous, [data-date]", function(e){
 
@@ -333,8 +333,8 @@
         hide: function() {
 
             if (active && active === this) {
-                dropdown.hide();
-                active = false;
+//              dropdown.hide();
+//              active = false;
 
                 this.trigger('hide.uk.datepicker');
             }

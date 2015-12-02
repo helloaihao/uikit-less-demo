@@ -5,7 +5,7 @@
 		<meta name="renderer" content="webkit|ie-comp|ie-stand">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>乐评+</title>
+		<title>乐评家</title>
 		<link rel="shortcut icon" href="../../images/favicon.ico" />
 		<!-- build:css({.tmp,src}) /css/main.css -->
 		<link rel="stylesheet" href="../../css/main.css" />
@@ -25,7 +25,7 @@
 		<div class="teacherList-bg">
 			<div class="uk-container uk-container-center">
 				<div class="uk-grid">
-					<div class="uk-width-1-2 uk-margin-large-top">
+					<div class="uk-width-medium-1-2 uk-margin-large-top">
 						<h3 id="teacherList-h3">名师库  / <span>TEACHER LIBRARY</span></h3>
 					</div>
 					<!--<div class="uk-width-1-2 uk-margin-large-top">
@@ -35,20 +35,15 @@
 					<div class="uk-width-1-1 uk-margin-large-top">
 						<div class="uk-grid">
 							<div class="uk-width-1-10 teacherList-con">
-								<i class="i-small-1"></i>
-								<i class="i-big-1"></i>
-								<i class="i-small-1 i-small-2"></i>
-								<i class="i-big-1 i-big-2"></i>
-								<i class="i-small-last"></i>
 							</div>
 							<div class="uk-width-9-10">
 								<div class="uk-grid lk-teachers" data-bind="foreach:{data: teachers}">
-									<div class="uk-width-1-3 uk-margin-large-bottom">
-										<a data-bind="attr:{href: 'teacherInfo.html?id=' +  UserID}"><img data-bind="attr:{src: common.getPhotoUrl(Photo)}" onerror="this.src='../../images/teacherList-photo.png';" /></a>
+									<div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-1-1 uk-margin-large-bottom">
+										<a data-bind="attr:{href: 'teacherInfo.html?id=' +  UserID}"><img data-bind="attr:{src: common.getPhotoUrl(Photo)}" onerror="this.src='../../images/video-big-default.png';" /></a>
 										<div class="teacherList-con-border">
-											<div class="uk-grid">
+											<div class="uk-grid" style="max-width: 314px;">
 												<div class="uk-width-1-2">
-													<span data-bind="text: DisplayName">刘洋</span>(<span data-bind="text: TeachAge">8</span>年教龄)
+													<span data-bind="text: DisplayName">刘洋</span><!--(<span data-bind="text: TeachAge">8</span>年教龄)-->
 												</div>
 												<div class="uk-width-1-2 uk-text-right" data-bind="text: SubjectName">
 													钢琴

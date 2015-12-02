@@ -9109,6 +9109,128 @@ a.uk-thumbnail:focus {
 .uk-nav-autocomplete .uk-nav-divider {
   border-top: 1px solid #ddd;
 }
+/* ========================================================================
+   Component: Datepicker
+ ========================================================================== */
+/*
+ * 1. Highest z-index
+ * 2. Reset dropdown width
+ * 3. Set animation
+ * 4. Needed for scale animation
+ */
+.uk-datepicker {
+  /* 1 */
+  z-index: 1050;
+  /* 2 */
+  width: auto;
+  /* 3 */
+  -webkit-animation: uk-fade 0.2s ease-in-out;
+  animation: uk-fade 0.2s ease-in-out;
+  /* 4 */
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+/* Sub-object: `uk-datepicker-nav`
+========================================================================== */
+.uk-datepicker-nav {
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 20px;
+}
+/*
+ * Micro clearfix
+ */
+.uk-datepicker-nav:before,
+.uk-datepicker-nav:after {
+  content: "";
+  display: table;
+}
+.uk-datepicker-nav:after {
+  clear: both;
+}
+/*
+ * Previous and next navigation
+ */
+.uk-datepicker-nav a {
+  color: #444;
+  text-decoration: none;
+}
+.uk-datepicker-nav a:hover {
+  color: #444;
+}
+.uk-datepicker-previous {
+  float: left;
+}
+.uk-datepicker-next {
+  float: right;
+}
+.uk-datepicker-previous:after,
+.uk-datepicker-next:after {
+  width: 20px;
+  font-family: FontAwesome;
+}
+.uk-datepicker-previous:after {
+  content: "\f053";
+}
+.uk-datepicker-next:after {
+  content: "\f054";
+}
+/* Sub-object: `uk-datepicker-heading`
+========================================================================== */
+/* Sub-object: `uk-datepicker-table`
+========================================================================== */
+/* Block element behavior */
+.uk-datepicker-table {
+  width: 100%;
+}
+.uk-datepicker-table th,
+.uk-datepicker-table td {
+  padding: 2px;
+}
+.uk-datepicker-table th {
+  font-size: 12px;
+}
+/*
+ * Item
+ */
+.uk-datepicker-table a {
+  display: block;
+  width: 26px;
+  line-height: 24px;
+  text-align: center;
+  color: #444;
+  text-decoration: none;
+}
+/*
+ * Sub-object: `uk-datepicker-table-muted`
+ */
+a.uk-datepicker-table-muted {
+  color: #999;
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+.uk-datepicker-table a:hover,
+.uk-datepicker-table a:focus {
+  background-color: #ddd;
+  color: #444;
+  /* 2 */
+  outline: none;
+}
+/* OnClick */
+.uk-datepicker-table a:active {
+  background-color: #ccc;
+  color: #444;
+}
+/*
+ * Active
+ */
+.uk-datepicker-table a.uk-active {
+  background: #00a8e6;
+  color: #fff;
+}
 #lk-logo {
   width: 259px;
   height: 88px;
@@ -9194,7 +9316,7 @@ a.uk-thumbnail:focus {
   color: #333;
 }
 .contant hr {
-  margin: 12px 0;
+  margin: 8px 0;
   border-top: 2px solid #ddd;
 }
 .contant a {
@@ -9260,6 +9382,40 @@ a.uk-thumbnail:focus {
   font-size: 40px;
   line-height: 105px;
 }
+.news .uk-list li {
+  margin-top: 32px;
+}
+.news .uk-list a {
+  color: #007dd1;
+}
+#lk-news ul li a {
+  font-size: 16px;
+}
+#lk-news .uk-overlay-panel {
+  padding: 10px;
+}
+#myFocus {
+  width: 550px;
+  height: 360px;
+}
+@media screen and (max-width: 320px) {
+  #myFocus {
+    width: 210px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #myFocus {
+    width: 240px;
+    height: 140px;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 415px) {
+  #myFocus {
+    width: 270px;
+    height: 160px;
+  }
+}
 .arts1-pic-top,
 .arts1-second-top {
   margin-top: 20px;
@@ -9313,7 +9469,7 @@ a.uk-thumbnail:focus {
 }
 #arts1-hr {
   border-top: 3px solid #036EB8;
-  margin-top: 32px;
+  margin-top: 1px;
 }
 .arts1-second-top {
   margin-top: 3px;
@@ -9405,6 +9561,9 @@ a.uk-thumbnail:focus {
   font-size: 14px;
   text-indent: 2em;
   line-height: 24px;
+}
+.uk-datepicker {
+  z-index: 0;
 }
 .aboutUs-h2 {
   color: #007dd1;
@@ -9541,50 +9700,7 @@ a.uk-thumbnail:focus {
   font-weight: normal;
 }
 .teacherList-con {
-  border-right: 1px solid #036EB8;
-  margin: 0 auto;
-  padding: 0px 15px;
-  box-sizing: border-box;
-  position: relative;
-}
-.teacherList-con .i-small-1 {
-  height: 11px;
-  width: 11px;
-  border-radius: 50%;
-  background: #036EB8;
-  border: 2px solid #fff;
-  display: inline-block;
-  position: absolute;
-  right: -8px;
-  top: -5px;
-}
-.teacherList-con .i-big-1 {
-  height: 17px;
-  width: 17px;
-  border-radius: 50%;
-  background: #036EB8;
-  border: 2px solid #fff;
-  display: inline-block;
-  position: absolute;
-  right: -11px;
-  top: 30px;
-}
-.teacherList-con .i-small-2 {
-  top: 600px;
-}
-.teacherList-con .i-small-last {
-  height: 11px;
-  width: 11px;
-  border-radius: 50%;
-  background: #036EB8;
-  border: 2px solid #fff;
-  display: inline-block;
-  position: absolute;
-  right: -8px;
-  bottom: -3px;
-}
-.teacherList-con .i-big-2 {
-  top: 630px;
+  background: url(../../images/solid.png) right repeat-y;
 }
 .teacherList-con-border {
   border-left: 1px solid #bfbfbf;
@@ -9660,6 +9776,9 @@ a.uk-thumbnail:focus {
 .teacherList-con .i-big-3 {
   top: 730px;
 }
+.lk-works img {
+  border: 1px solid #bfbfbf;
+}
 .teacherInfo-teacher {
   background: #F1F1F1;
 }
@@ -9714,19 +9833,19 @@ a.uk-thumbnail:focus {
 .teacherInfo-teacher-line {
   height: 134px;
   line-height: 54px;
+  border-left: 1px dashed #666;
   border-right: 1px dashed #666;
   margin-top: 40px;
 }
 .teacherInfo-teacher-left {
   padding-top: 20px;
-  border-right: 1px dashed #666;
 }
 .teacherInfo-btn-ul li {
   list-style: none;
-  padding: 10px 0;
+  padding: 8px 0;
   margin: 4px 0;
   background: #007dd1;
-  width: 60%;
+  width: 50%;
   color: #fff;
   text-align: center;
   font-size: 16px;
@@ -9736,7 +9855,7 @@ a.uk-thumbnail:focus {
   box-sizing: border-box;
 }
 .teacherInfo-dir {
-  background: url(../images/teacherInfo-pic1.jpg) no-repeat;
+  background: url(../images/teacherInfo-pic1.png) no-repeat;
   width: 62px;
   height: 69px;
   position: relative;
@@ -9757,7 +9876,7 @@ a.uk-thumbnail:focus {
   left: 28px;
 }
 .teacherInfo-dir.current {
-  background: url(../images/teacherInfo-pic.jpg) no-repeat;
+  background: url(../images/teacherInfo-pic.png) no-repeat;
   width: 62px;
   height: 69px;
   position: relative;
@@ -9767,7 +9886,7 @@ a.uk-thumbnail:focus {
 }
 .teacherInfo-dir-dashed {
   width: 42%;
-  height: 40px;
+  height: 15px;
   margin-top: 2px;
   border-right: 1px dashed #999;
 }
@@ -9864,6 +9983,10 @@ a.uk-thumbnail:focus {
   margin-left: 16px;
   margin-right: 6px;
 }
+.lk-workInfo-ico a {
+  text-decoration: none;
+  color: #999;
+}
 .newsInfo-title {
   color: #333;
   font-size: 26px;
@@ -9936,25 +10059,30 @@ a.uk-thumbnail:focus {
   line-height: 30px;
   color: #fff;
   font-size: 22px;
+  margin-bottom: 15px;
 }
 .verifyActUser-input {
   margin: 20px auto 5px;
   height: auto;
   width: 76%;
   overflow: hidden;
+  border-radius: 3px;
 }
 .verifyActUser-input input {
-  width: 100%;
-  height: 44px;
+  width: 98%;
+  height: 42px;
   border: none;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #333;
   font-size: 16px;
   font-family: "微软雅黑";
   text-align: center;
-  line-height: 44px;
-  margin-bottom: 20px;
+  line-height: 40px;
+  margin-bottom: 14px;
+}
+.verifyActUser-input-top {
+  margin: 5px auto 5px;
 }
 .verifyActUser-button {
   width: 36%;
@@ -9975,10 +10103,8 @@ a.uk-thumbnail:focus {
 .verifyActUser-footer-logo {
   height: 50px;
   width: 181px;
-  position: absolute;
-  left: 50%;
-  bottom: 6px;
-  margin-left: -90px;
+  margin-top: 300px;
+  background: url(../images/school-logo.png) no-repeat fixed;
 }
 .getSeat-title {
   height: auto;
@@ -10020,4 +10146,74 @@ a.uk-thumbnail:focus {
   color: #cf0000;
   font-weight: 600;
   margin-top: 30px;
+}
+.search-header {
+  height: auto;
+  width: 100%;
+  background: #007dd1;
+  padding: 40px 150px;
+  box-sizing: border-box;
+}
+.search-header .search-font {
+  margin-left: 20px;
+}
+.search-header .search-input {
+  position: relative;
+  width: 410px;
+}
+.search-header .search-input input {
+  height: 40px;
+  width: 410px;
+  margin-left: 20px;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  color: #999;
+  line-height: 40px;
+  font-family: "微软雅黑";
+  padding: 0 15px;
+  position: absolute;
+  left: 250px;
+  top: -54px;
+}
+.search-header .i-search {
+  position: absolute;
+  right: -288px;
+  top: -45px;
+  font-size: 18px;
+  color: #999;
+}
+.search-con,
+.search-con-center {
+  height: auto;
+  padding: 18px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.search-con p,
+.search-con-center p {
+  margin: 0;
+}
+.search-con-center p {
+  line-height: 26px;
+}
+.search-con-center p a {
+  text-decoration: underline;
+}
+.search-con-center p span {
+  margin-left: 24px;
+  color: #CF0000;
+}
+.reh-title {
+  border-bottom: 1px solid #ccc;
+  padding: 36px 0 15px 0;
+  text-align: center;
+}
+.reh-con p {
+  text-align: center;
+}
+img {
+  margin: 0 auto;
+  display: inline-block;
 }

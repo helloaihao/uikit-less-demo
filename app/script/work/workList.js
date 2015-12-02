@@ -2,7 +2,7 @@ var viewModel = function() {
 	var self = this;
 
 	var pageCount = 0,
-		pageSize = 3,
+		pageSize = 9,
 		pageflag = false;
 		pageID = 1;
 	self.pages = ko.observableArray([]);
@@ -20,6 +20,7 @@ var viewModel = function() {
 					var pagedom = $('.uk-pagination');
 					UIkit.pagination(pagedom, {items: self.works()[0].TotalCount, itemsOnPage: pageSize, displayedPages: 3, edges: 1});
 					pageflag = true;
+					$('#work-defult').css({'display': 'none'});
 				}
 
 				//document.getElementsByTagName('body')[0].scrollTop = 0;
