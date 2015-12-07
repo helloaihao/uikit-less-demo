@@ -2,7 +2,7 @@ var viewModel = function() {
 	var self = this;
 
 	var pageCount = 0,
-		pageSize = 7,
+		pageSize = 4,
 		pageflag = false;
 		pageID = 1;
 	self.pages = ko.observableArray([]);
@@ -20,7 +20,7 @@ var viewModel = function() {
 				self.GZTeacher(JSON.parse(data));
 				var tmp = [];
 				self.tmpTeacher([]);
-				for(var i = (pageID-1)*7; i < pageID*7 && i < self.GZTeacher().length; i ++) {
+				for(var i = (pageID-1)*pageSize; i < pageID*pageSize && i < self.GZTeacher().length; i ++) {
 					self.tmpTeacher.push(self.GZTeacher()[i]);
 				}
 				if (!pageflag) {

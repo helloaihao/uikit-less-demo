@@ -129,7 +129,7 @@
 				<form>
 					<div class="seat-search">
 						<i class="uk-icon-search"></i>
-						<input type="text" placeholder="最多显示10条结果" data-bind="value: searchText" />
+						<input type="text" placeholder="请输入姓名、电话或座位" data-bind="value: searchText" />
 						<button class="uk-button seat-search-button" data-bind="click: search" type="submit">搜索</button>
 					</div>
 				</form>
@@ -143,7 +143,7 @@
 					<!--ko foreach: {data: allShowsPics, as: 'pic'}-->
 					<a class="uk-button uk-button-primary address-btn" data-bind="attr: {'href': pic.path}, text: pic.filename, visible: pic.showid==show.ID"></a>
 					<!--/ko-->
-	
+					<!--<p>最多显示10条结果</p>-->
 					<p class="seat">座位号：<span data-bind="text: SeatIsFinal && SeatName != '' ? SeatName : '未分配'">一楼5排16号</span></p>
 				</div>
 			</div>

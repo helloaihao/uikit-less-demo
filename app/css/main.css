@@ -9430,10 +9430,15 @@ a.uk-datepicker-table-muted {
   font-size: 18px;
   line-height: 52px;
   margin-left: 10px;
+  border-bottom: solid #007dd1 2px;
 }
 .arts1-pic-top .arts1-span-small,
 .arts1-second-top .arts1-span-small {
   font-size: 14px;
+}
+.arts1-pic-top .uk-overlay-panel,
+.arts1-second-top .uk-overlay-panel {
+  padding: 10px;
 }
 .arts1-banner-top,
 .arts1-banner-right-top,
@@ -9513,7 +9518,7 @@ a.uk-datepicker-table-muted {
   padding: 15px 0;
   background: #e6e4e7;
   border: 1px solid #d9d8da;
-  margin-top: 60px;
+  margin-top: 45px;
 }
 .arts1-teacher-ku-con .techer-photo-left {
   height: 96px;
@@ -9564,6 +9569,13 @@ a.uk-datepicker-table-muted {
 }
 .uk-datepicker {
   z-index: 0;
+}
+.lk-gz-more {
+  margin-top: 20px;
+}
+.lk-active {
+  background-color: #ccc;
+  color: #444;
 }
 .aboutUs-h2 {
   color: #007dd1;
@@ -9691,6 +9703,10 @@ a.uk-datepicker-table-muted {
   box-sizing: border-box;
   padding: 0 10px;
 }
+.newsList-con-bg img {
+  width: 100%;
+  max-height: 222px;
+}
 #teacherList-h3 {
   color: #333;
   font-family: "微软雅黑";
@@ -9778,6 +9794,8 @@ a.uk-datepicker-table-muted {
 }
 .lk-works img {
   border: 1px solid #bfbfbf;
+  width: 100%;
+  height: 237px;
 }
 .teacherInfo-teacher {
   background: #F1F1F1;

@@ -103,7 +103,10 @@
                                 if(!day.inmonth) cls.push("uk-datepicker-table-muted");
                                 if(day.selected) cls.push("uk-active");
                                 if(day.disabled) cls.push('uk-datepicker-date-disabled uk-datepicker-table-muted');
-
+                                
+                                //aihao
+                                if(day.active) cls.push("lk-active");
+								
                                 content += '<td><a href="" class="'+cls.join(" ")+'" data-date="'+day.day.format()+'">'+day.day.format("D")+'</a></td>';
                             }
                         }
@@ -208,6 +211,7 @@
                 css    = {"left": offset.left, "right":""};
 
             this.current  = isNaN(initdate) ? moment(initdate, this.options.format):moment();
+            
             this.initdate = this.current.format("YYYY-MM-DD");
 
             this.update();
@@ -305,7 +309,7 @@
 
             cells += 7 - after;
 
-            var day, isDisabled, isSelected, isToday, isInMonth;
+            var day, isDisabled, isSelected, isToday, isInMonth, isActive;
 
             for (var i = 0, r = 0; i < cells; i++) {
 
@@ -316,9 +320,13 @@
                 day = moment(day);
 
                 isSelected = this.initdate == day.format("YYYY-MM-DD");
+                
                 isToday    = now == day.format("YYYY-MM-DD");
+				
+				//aihao
+				isActive   = "2015-12-14" == day.format("YYYY-MM-DD") || "2015-12-15" == day.format("YYYY-MM-DD") || "2015-12-16" == day.format("YYYY-MM-DD");
 
-                row.push({"selected": isSelected, "today": isToday, "disabled": isDisabled, "day":day, "inmonth":isInMonth});
+                row.push({"selected": isSelected, "today": isToday, "disabled": isDisabled, "day":day, "inmonth":isInMonth, "active": isActive});
 
                 if (++r === 7) {
                     data.days.push(row);
