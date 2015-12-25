@@ -23,7 +23,7 @@
 		});
 	}();
 
-	var carouselurl = common.gServerUrl + "Common/Slider/GetList";
+	var carouselurl = common.gServerUrl + "Common/Slider/GetList?module=1";
 	self.carouselCount = ko.observableArray([]);
 	self.slideshowItem = ko.observableArray([]);
 	self.getCarousel = function() {

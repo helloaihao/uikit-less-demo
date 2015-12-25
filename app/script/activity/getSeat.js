@@ -63,6 +63,20 @@
 			}
 		});
 	}
+	
+	self.recertify = function(){
+		var url = common.gServerUrl + "Open/WeixinMP/UnbindUserWeixin?openid="+openid;
+		$.ajax({
+			type: "put",
+			url: url,
+			success: function(responseText) {
+				window.location = "verifyActUser.html?openid="+openid+"&actid="+actid+"&state=aHR0cDovL3d3dy5saW5rZW9sLmNvbS9tb2R1bGVzL2FjdGl2aXR5L2dldHNlYXQuaHRtbD9vcGVuaWQ9ezB9JmFjdGlkPTE";
+			},
+			error: function(respText){
+				UIkit.notify("取消绑定失败，请确认信息正确！", {timeout: 2000, pos:'bottom-center'});
+			}
+		});
+	}
 
 	self.search = function() {
 		$("#waiting").show();
@@ -108,6 +122,8 @@
 			self.getData();
 			$("#main").show();
 		}
+		/*$("#waiting").hide();
+		$("#main").show();*/
 	})
 }
 

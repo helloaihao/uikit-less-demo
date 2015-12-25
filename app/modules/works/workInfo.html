@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../../css/main.css" />
 		<!-- endbuild -->
 		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/vendors/video.css"/>
 		<!--header$footer-->
 		<script type="text/javascript" src="../../script/header-footer.js"></script>
 	</head>
@@ -33,49 +34,52 @@
 			</ul>
 		</div>
 		<div class="uk-container uk-container-center workInfo-con-dow">
-			<div class="workInfo-con-padding uk-margin-top workInfo-border" data-bind="foreach:{data: works}">
+			<div class="workInfo-con-padding uk-margin-top workInfo-border">
 				<div class="uk-grid">
-					<div class="uk-width-1-1">
-						<img src="../../images/1_1280x800.jpg" />
+					<div class="uk-width-1-1" data-bind="foreach:{data: video}">
+						<video id="my-video" class="video-js uk-width-1-1" height="600" controls preload="auto" data-setup="{}" oncontextmenu="return false">
+							<!--<source data-bind="attr:{src:common.gVideoServerUrl + video.VideoUrl}" type="video/mp4"></source>-->
+						</video>
 					</div>
 				</div>
-				<div class="uk-grid">
-					<div class="uk-width-medium-1-1 uk-width-small-1-2">
+				<div class="uk-grid" data-bind="foreach:{data: works}">
+					<div class="uk-width-medium-1-1 uk-width-4-5">
 						<span data-bind="text: Title">扬琴弹奏技巧</span>
 						<em data-bind="text: SubjectName">扬琴</em>
 					</div>
 
-					<div class="uk-width-medium-1-10 uk-width-small-1-2">
-						<img src="../../images/workInfo-photo.jpg" />
+					<div class="uk-width-medium-1-10 uk-width-1-5">
+						<img data-bind="attr:{src: common.getPhotoUrl(AuthorPhoto)}" onerror="this.src='../../images/video-big-default.png';" />
 					</div>
-					<div class="uk-width-medium-9-10 uk-width-small-1-1 workInfo-ul-padding">
+					<div class="uk-width-medium-9-10 uk-width-1-1 workInfo-ul-padding">
 						<ul class="workInfo-ul">
 							<li>
 								<span data-bind="text: AuthorName">赵小小</span>
 								<i data-bind="text: AddTime">发布于2015-11-12 12:20:32</i><i class="iconfont i-font">&#xe60e;</i>
 								<i data-bind="text: ReadCount">2365</i>
 							</li>
-							<li class="lk-workInfo-ico">
+							<!--<li class="lk-workInfo-ico">
 								<button>+关注</button>
 								<a href=""><i class="iconfont i-font">&#xe60b;</i><i data-bind="text: LikeCount">123</i></a>
 
 								<a href=""><i class="iconfont i-font">&#xe607;</i>分享</a>
 								<a href=""><i class="iconfont i-font">&#xe608;</i>收藏</a>
-								<!--<i class="iconfont i-font">&#xe60a;</i>下载-->
-								<!--<i class="iconfont i-font">&#xe609;</i>用手机观看-->
-							</li>
+								<i class="iconfont i-font">&#xe60a;</i>下载
+								<i class="iconfont i-font">&#xe609;</i>用手机观看
+							</li>-->
+							<p data-bind="text: ContentText"> 广东民族乐团青年胡琴演奏家 中胡声部首席 毕业于湖南师范大学音乐学院 师从杨长安教授 在校期间，曾多次荣获湖南省器乐比赛大奖，活跃于湖南省各类音乐会舞台。
+							</p>
 						</ul>
-						<p data-bind="text: ContentText"> 广东民族乐团青年胡琴演奏家 中胡声部首席 毕业于湖南师范大学音乐学院 师从杨长安教授 在校期间，曾多次荣获湖南省器乐比赛大奖，活跃于湖南省各类音乐会舞台。
-						</p>
+
 					</div>
 				</div>
-
+				<!--
 				<div class="uk-width-1-1 uk-margin-top">
 					Ta的相关作品
 				</div>
 				<div class="uk-width-1-1 uk-margin-top">
 					<img src="../../images/workInfo-ta.jpg" />
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<footer></footer>
@@ -89,6 +93,7 @@
 		<script type="text/javascript" src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
 		<script type="text/javascript" src="../../script/vendors/uikit/components/search.min.js"></script>
 		<script type="text/javascript" src="../../script/vendors/uikit/components/sticky.min.js"></script>
+		<script src="../../script/vendors/videojs.js"></script>
 		<!-- linkeol -->
 		<script src="../../script/common/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../script/work/workInfo.js" type="text/javascript" charset="utf-8"></script>

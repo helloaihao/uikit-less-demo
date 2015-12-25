@@ -1,4 +1,13 @@
 ﻿var common = {
+		//chen ge
+		//gServerUrl: "http://192.168.1.66:8090/",gVideoServerUrl: "http://192.168.1.66:8099/",
+		
+		//Web API地址
+		gServerUrl: "http://172.16.30.90:8090/",gWebsiteUrl: "http://172.16.30.90:8081/",gVideoServerUrl: "http://172.16.30.90:8099/",
+		
+		//正式
+		//gServerUrl: "http://cloud.linkeol.com/",gWebsiteUrl: "http://www.linkeol.com/",gVideoServerUrl: "http://video.linkeol.com/",
+		
 		//判断字符串是否为空，空则返回""
 		StrIsNull: function(str) {
 			if (str != null)
@@ -222,13 +231,8 @@
 			return common.gVideoServerUrl + 'Thumbnails/' + photo;
 		},
 
-		//Web API地址
-		gServerUrl: "http://cloud.linkeol.com/", //"http://localhost:53651/"	//"http://192.168.1.99:8090/" http://192.168.1.66:8090/ "http://cloud.linkeol.com/"
 
-		gWebsiteUrl: "http://www.linkeol.com/", //http://192.168.1.66:8090/
-
-		gVideoServerUrl: "http://video.linkeol.com/",
-
+		
 		//用户类型枚举
 		gDictUserType: {
 			teacher: 32,
@@ -414,4 +418,10 @@ $.extend({
 	getUrlVar: function(name) {
 		return $.getUrlVars()[name];
 	}
+});
+
+$('.uk-search-field').bind('keydown', function(event) {
+    if (event.keyCode == "13") {
+    	$('#searchBtn').click();
+    }
 });

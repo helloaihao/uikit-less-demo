@@ -9297,8 +9297,13 @@ a.uk-datepicker-table-muted {
 .lk-nav .uk-navbar-brand,
 .lk-nav .uk-navbar-toggle {
   color: #fff;
+  margin-top: 6px;
 }
-.uk-offcanvas-bar {
+.lk-nav .uk-navbar-toggle {
+  font-size: 28px;
+  margin-left: -20px;
+}
+.lk-nav .uk-offcanvas-bar {
   width: 240px;
 }
 .lk-footer {
@@ -9515,7 +9520,7 @@ a.uk-datepicker-table-muted {
   position: relative;
 }
 .arts1-teacher-ku-con {
-  padding: 15px 0;
+  padding: 15px;
   background: #e6e4e7;
   border: 1px solid #d9d8da;
   margin-top: 45px;
@@ -9576,6 +9581,35 @@ a.uk-datepicker-table-muted {
 .lk-active {
   background-color: #ccc;
   color: #444;
+}
+.arts1-teachers p {
+  text-align: center;
+  background: #007DD1;
+  color: #fff;
+}
+.arts1-teachers img {
+  border: solid 1px #999;
+}
+.arts1-zj {
+  margin-top: 25px;
+}
+.arts1-zj p {
+  font-size: 12px;
+}
+.arts1-zj .zj-name p {
+  background: #007DD1;
+  width: 15px;
+  color: #fff;
+  padding-left: 5px;
+}
+.arts1-zj .zj-name-right {
+  padding-left: 15px;
+}
+.arts1-zj .zj-name-left {
+  padding-left: 34px;
+}
+.arts1-zj .zj-intro-right {
+  padding-left: 25px;
 }
 .aboutUs-h2 {
   color: #007dd1;
@@ -9968,9 +10002,6 @@ a.uk-datepicker-table-muted {
 .workInfo-con-dow .workInfo-ul-padding {
   padding-left: 0;
 }
-.workInfo-con-dow .workInfo-ul {
-  padding-left: 0;
-}
 .workInfo-con-dow .workInfo-ul li {
   width: 100%;
   list-style: none;
@@ -10218,9 +10249,9 @@ a.uk-datepicker-table-muted {
 }
 .search-con-center p a {
   text-decoration: underline;
+  margin-right: 24px;
 }
 .search-con-center p span {
-  margin-left: 24px;
   color: #CF0000;
 }
 .reh-title {

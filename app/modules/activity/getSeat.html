@@ -7,7 +7,7 @@
 		<title>古筝艺术节——座位分配</title>
 		<!--<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />-->
 		<link href="../../fonts/iconfont.css" rel="stylesheet" />
-		<link href="../../css/main.css" rel="stylesheet" />
+		<link href="../../css/main.css?v=1.0.0" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
 		<style>
 			html,
@@ -19,7 +19,7 @@
 				color: #fff;
 				height: 30px;
 				width: 100%;
-				padding: 15px 0px 5px 15px;
+				padding: 15px 0px 38px 15px;
 				box-sizing: border-box;
 				font-size: 16px;
 			}
@@ -95,6 +95,7 @@
 				letter-spacing: 1px;
 				border: none;
 				font-family: "微软雅黑";
+				background: #fff;
 			}
 			
 			.address-btn {
@@ -110,6 +111,18 @@
 				bottom: 0;
 				right: 0;
 			}
+			.recertify{
+				background: #fff;
+				border-radius: 3px;
+				height: 30px;
+				width: 80px;
+				border: none;
+				color: #666;
+				font-family: "微软雅黑";
+				position: absolute;
+				right: 20px;
+				top: 12px;
+			}
 		</style>
 	</head>
 
@@ -120,7 +133,10 @@
 
 		<div id="main" style="display: none;">
 			<div class="getSeat-title" data-bind="visible: actRoleType() == 1 || actRoleType() == 2">
-				<h3 data-bind="html: '尊敬的<u> ' + displayName() + ' </u>先生/女士：'"></h3>
+				<h3 data-bind="html: '尊敬的<u> ' + displayName() + ' </u>先生/女士：'">
+					
+				</h3>
+				<button class="recertify" data-bind="click: recertify">重新验证</button>
 				<p data-bind="visible: allShows().length > 0">您好！您的座位信息如下：</p>
 				<p data-bind="visible: allShows().length <= 0">很抱歉，暂无您的座位安排信息。</p>
 			</div>
@@ -133,8 +149,8 @@
 						<button class="uk-button seat-search-button" data-bind="click: search" type="submit">搜索</button>
 					</div>
 				</form>
+				<button class="recertify" data-bind="click: recertify">重新验证</button>
 			</div>
-
 			<div data-bind="foreach: {data: allShows, as: 'show'}, visible: (actRoleType() == 1 || actRoleType() == 2) && allShows().length > 0">
 				<div class="getSeat-con-bg">
 					<p>场次：<span data-bind="text: ShowTitle">古韵凝香 —— 名家音乐会系列一</span></p>
@@ -182,7 +198,7 @@
 		<script src="../../script/vendors/uikit/components/notify.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../script/common/common.js"></script>
 		<script src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
-		<script src="../../script/activity/getSeat.js"></script>
+		<script src="../../script/activity/getSeat.js?v=1.0.0"></script>
 		<script src="../../script/vendors/uikit/components/lightbox.min.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
