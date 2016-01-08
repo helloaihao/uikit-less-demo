@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>乐评家</title>
+		<link rel="shortcut icon" href="../../images/favicon.ico" />
+		<!-- build:css({.tmp,src}) /css/main.css -->
+		<link rel="stylesheet" href="../../css/main.css" />
+		<!-- endbuild -->
+		<link rel="stylesheet" href="../../fonts/iconfont.css" />
+		<!--header$footer-->
+		<script type="text/javascript" src="../../script/header-footer.js"></script>
+	</head>
+
+	<body style="background: #F1F1F1;">
+		<!-- 头部 -->
+		<header></header>
+		<script type="text/javascript">
+			headerInit(1);
+		</script>
+		<div class="newsList-bg">
+			<div class="uk-container uk-container-center">
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-margin-large-top">
+						<h3>乐评资讯 / <span class="newsList-title-Engshile">NEWS</span></h3>
+						<hr />
+					</div>
+					<div class="uk-width-1-1" data-bind="foreach:{data: news}">
+						<div class="uk-grid newsList-margin-top">
+							<div class="uk-width-3-10">
+								<a data-bind="attr:{href: 'newsInfo.html?id=' + ID}"><img data-bind="attr:{src: common.getPhotoUrl2(ThumbnailPath)}" /></a> 
+							</div>
+							<div class="uk-width-7-10">
+								<h4 class="newsList-small-font" data-bind="text: Title">「乐」头条 | 中小学生艺术素质测评指标体系（试行）</h4>
+								<div class="uk-width-1-1 uk-margin-large-top uk-hidden-small">
+									<p class="p-line" data-bind="text: Abstract">中小学生艺术素质测评指标体系中小学生艺术素质测评指标体系中小学生艺术素质测评指标体系中小学生艺术素质测评指标体系中小学生艺
+										术素质测评指标体系中小学生术素质测评指标体系中小学生艺术素质测评指标体系中小学生艺术素质测评指标体系中小学生艺术素质测评指标体系中小学
+										生艺术素质测评指标体系中小学生艺术素质测……</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+			<div class="uk-grid">
+					<div class="uk-width-1-1">
+						<ul class="uk-pagination uk-pagination-right">
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+			
+			
+			</div>
+		</div>
+		
+	<footer></footer>
+			<script type="text/javascript">
+				footerInit();
+			</script>
+			<!-- jq -->
+			<script type="text/javascript" src="../../script/vendors/jquery.min.js"></script>
+			<!-- uikit -->
+			<script type="text/javascript" src="../../script/vendors/uikit/uikit.min.js"></script>
+			<script type="text/javascript" src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
+			<script type="text/javascript" src="../../script/vendors/uikit/components/search.min.js"></script>
+			<script type="text/javascript" src="../../script/vendors/uikit/components/sticky.min.js"></script>
+			<script src="../../script/vendors/uikit/components/pagination.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="../../script/common/common.js"></script>
+			<script type="text/javascript" src="../../script/news/newsList.js" ></script>
+			
+			<!-- linkeol -->			
+	</body>
+
+</html>

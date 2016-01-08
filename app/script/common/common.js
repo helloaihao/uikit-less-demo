@@ -1,9 +1,9 @@
 ﻿var common = {
 		//chen ge
-		//gServerUrl: "http://192.168.1.66:8090/",gVideoServerUrl: "http://192.168.1.66:8099/",
+		gServerUrl: "http://192.168.1.66:8090/",gVideoServerUrl: "http://192.168.1.66:8099/",
 		
 		//Web API地址
-		gServerUrl: "http://172.16.30.90:8090/",gWebsiteUrl: "http://172.16.30.90:8081/",gVideoServerUrl: "http://172.16.30.90:8099/",
+		//gServerUrl: "http://192.168.1.99:8090/",gWebsiteUrl: "http://192.168.1.99:8081/",gVideoServerUrl: "http://192.168.1.99:8099/",
 		
 		//正式
 		//gServerUrl: "http://cloud.linkeol.com/",gWebsiteUrl: "http://www.linkeol.com/",gVideoServerUrl: "http://video.linkeol.com/",

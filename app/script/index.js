@@ -36,13 +36,20 @@
 				for (var i = 0; i < dts.length; i++) {
 					tmp[i] = i;
 				}
-				self.slideshowItem(tmp);
+				
 				self.carouselCount(dts);
 				var lkSlideshow = document.getElementById('lk-slideshow');
 				var slideshow = UIkit.slideshow(lkSlideshow, {
 					autoplay: true,
 					autoplayInterval   : 5000
 				});
+				setTimeout(function(){
+					self.slideshowItem(tmp);
+				}, 1000);
+				
+			},
+			complete:function(data) {
+				$('#slideshow-placeholder').css('display', 'none');
 			}
 		});
 	}();

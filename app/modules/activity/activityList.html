@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>活动资讯</title>
+		<!--<link href="../../css/vendors/uikit/uikit.css" rel="stylesheet" />-->
+		<link href="../../fonts/iconfont.css" rel="stylesheet" />
+		<link href="../../css/main.css?v=1.0.0" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/vendors/uikit/components/notify.css" />
+		<script type="text/javascript" src="../../script/header-footer.js"></script>	
+			<style>
+				body{
+					background: #f4f4f4;
+				}
+			</style>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header></header>
+		<script type="text/javascript">
+			headerInit(1);
+		</script>
+				<div class="uk-container uk-container-center actitityList-content-bgColor">
+					<div class="uk-grid">
+					<div class="uk-width-1-1 uk-margin-large-top">
+						<h3>活动资讯 / <span class="newsList-title-Engshile">ACTIVITY</span></h3>
+					</div>
+					
+					<div class="uk-width-1-1 uk-margin-large-top">
+						<div class="uk-grid">
+							<div class="uk-width-1-10 teacherList-con">						
+							</div>
+							<div class="uk-width-9-10" data-bind="foreach:{data: activities}">
+								<div class="uk-grid" >
+									<div class="uk-width-1-1" >
+										<span class="activityList-title" data-bind="text:Title">首届岭南古筝艺术节</span>
+									</div>
+									<div class="uk-width-1-1 uk-margin-small-top">
+										<span class="activityList-time" >活动时间:<span data-bind="text:BeginTime">2015-12-26 </span> ~ <span data-bind="text:EndTime">2015-12-28</span></span>
+									</div>
+									<div class="uk-width-1-1 uk-margin-small-top actitityList-photo" >
+										<div class="actitityList-photo-main uk-width-1-1" data-bind="style: {'background-image': 'url(' + common.getPhotoUrl2(Thumbnail) +')'}">
+											
+										</div>
+										<div class="actitityList-photo-right">
+											<p>距离截止报名日期还有 <strong data-bind="text:(function(){
+												var x = Math.floor((new Date(EndTime)-Date.now())/(3600*1000*24));return x>=0?x:'0 '
+												})
+												()">16</strong>天</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="uk-grid">
+					<div class="uk-width-1-1">
+						<ul class="uk-pagination uk-pagination-right">
+							<li><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+						
+					</div>
+								
+					
+					</div>
+				
+				</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<footer></footer>
+			<script type="text/javascript">
+				footerInit();
+			</script>
+		<script type="text/javascript" src="../../script/vendors/jquery.min.js"></script>
+		<!-- uikit -->
+		<script type="text/javascript" src="../../script/vendors/uikit/uikit.min.js"></script>
+		<script type="text/javascript" src="../../script/vendors/uikit/components/search.min.js"></script>
+		<script type="text/javascript" src="../../script/vendors/uikit/components/sticky.min.js"></script>
+		<script type="text/javascript" src="../../script/vendors/knockout/knockout-3.3.0.min.js"></script>
+		<script src="../../script/vendors/uikit/components/pagination.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- linkeol -->
+		<script src="../../script/common/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../script/activity/activityList.js" ></script>
+	</body>
+
+</html>

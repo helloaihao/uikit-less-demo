@@ -86,9 +86,7 @@ var footerInfo = heredoc(function() {
 });
 
 var geturl = function(name) {
-	console.log(name);
 	var result = location.search.match(new RegExp("[\?\&]" + name + "=([^\&]+)", "i"));
-	console.log(result);
 	if (result == null || result.length < 1) {
 		return "";
 	}
